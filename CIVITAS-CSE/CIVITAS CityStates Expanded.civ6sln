@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# ModBuddy Solution File, Format Version 12.00
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CIVITAS CityStates Expanded", "CIVITAS CityStates Expanded\CIVITAS CityStates Expanded.civ6proj", "{D2D9A0A4-DD35-48BC-B17D-48D577F9D927}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE Types Maritime", "CSE Types Maritime\CSE Types Maritime.civ6proj", "{0BC3D2A9-4289-464E-ABF5-30DA11BCBC5A}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE Types Consular", "CSE Types Consular\CSE Types Consular.civ6proj", "{D4CB122D-053A-46D1-B27E-D22ECE899902}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE Types Entertainment", "CSE Types Entertainment\CSE Types Entertainment.civ6proj", "{FB6951A3-6C0A-42B9-BBD3-8987B5CCB9AD}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE Types Agricultural", "CSE Types Agricultural\CSE Types Agricultural.civ6proj", "{FB4477AB-38CE-48F5-96F8-33A963A5C09D}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE Rulesets Mekong", "CSE Rulesets Mekong\CSE Rulesets Mekong.civ6proj", "{78EC1830-0A39-4602-BD01-29EEC38E7532}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE Rulesets Yangtze", "CSE Rulesets Yangtze\CSE Rulesets Yangtze.civ6proj", "{7BBF5857-5C3E-41A1-BD25-CD9A7CC0F7F5}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE City-States Catalhoyuk", "CSE City-States Catalhoyuk\CSE City-States Catalhoyuk.civ6proj", "{D6FB9FB7-D0EA-4578-B5DD-2F95E963AA23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Civ6 = Default|Civ6
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2D9A0A4-DD35-48BC-B17D-48D577F9D927}.Default|Civ6.ActiveCfg = Default|Civ6
+		{D2D9A0A4-DD35-48BC-B17D-48D577F9D927}.Default|Civ6.Build.0 = Default|Civ6
+		{0BC3D2A9-4289-464E-ABF5-30DA11BCBC5A}.Default|Civ6.ActiveCfg = Default|Civ6
+		{0BC3D2A9-4289-464E-ABF5-30DA11BCBC5A}.Default|Civ6.Build.0 = Default|Civ6
+		{D4CB122D-053A-46D1-B27E-D22ECE899902}.Default|Civ6.ActiveCfg = Default|Civ6
+		{D4CB122D-053A-46D1-B27E-D22ECE899902}.Default|Civ6.Build.0 = Default|Civ6
+		{FB6951A3-6C0A-42B9-BBD3-8987B5CCB9AD}.Default|Civ6.ActiveCfg = Default|Civ6
+		{FB6951A3-6C0A-42B9-BBD3-8987B5CCB9AD}.Default|Civ6.Build.0 = Default|Civ6
+		{FB4477AB-38CE-48F5-96F8-33A963A5C09D}.Default|Civ6.ActiveCfg = Default|Civ6
+		{FB4477AB-38CE-48F5-96F8-33A963A5C09D}.Default|Civ6.Build.0 = Default|Civ6
+		{78EC1830-0A39-4602-BD01-29EEC38E7532}.Default|Civ6.ActiveCfg = Default|Civ6
+		{78EC1830-0A39-4602-BD01-29EEC38E7532}.Default|Civ6.Build.0 = Default|Civ6
+		{7BBF5857-5C3E-41A1-BD25-CD9A7CC0F7F5}.Default|Civ6.ActiveCfg = Default|Civ6
+		{7BBF5857-5C3E-41A1-BD25-CD9A7CC0F7F5}.Default|Civ6.Build.0 = Default|Civ6
+		{D6FB9FB7-D0EA-4578-B5DD-2F95E963AA23}.Default|Civ6.ActiveCfg = Default|Civ6
+		{D6FB9FB7-D0EA-4578-B5DD-2F95E963AA23}.Default|Civ6.Build.0 = Default|Civ6
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

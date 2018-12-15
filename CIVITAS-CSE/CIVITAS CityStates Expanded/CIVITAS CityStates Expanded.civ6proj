@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>CIVITAS [ICON_ENVOY] City-States Expanded</Name>
+    <Guid>7d0b57ba-6a5c-4de0-ac10-e1e464ac82f6</Guid>
+    <ProjectGuid>d2d9a0a4-dd35-48bc-b17d-48d577f9d927</ProjectGuid>
+    <ModVersion>103</ModVersion>
+    <Teaser>Modular framework for City-States Expanded and its extensions.</Teaser>
+    <Description>Modular framework for City-States Expanded and its extensions.</Description>
+    <Authors>thecrazyscotsman, Chrisy15, pOkiehl, ChimpanG, SeelingCat, SailorCat, Digihuman, Deliverator</Authors>
+    <SpecialThanks>
+    </SpecialThanks>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <AssemblyName>CIVITAS CityStates Expanded</AssemblyName>
+    <RootNamespace>CIVITAS CityStates Expanded</RootNamespace>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Framework"><Properties><LoadOrder>-1</LoadOrder></Properties><File priority="1">Core/Framework/CSE_Schema.sql</File><File>Core/Framework/CSE_Master.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Types"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Types.sql</File></UpdateDatabase><UpdateText id="CSE_Text"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Localisation.sql</File></UpdateText><UpdateIcons id="CSE_Icons"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Icons.sql</File></UpdateIcons><ReplaceUIScript id="CSE_CityStates_UI"><Properties><LoadOrder>49</LoadOrder><LuaContext>CityStates</LuaContext><LuaReplace>Core/Utilities/UI Replacements/CityStates.lua</LuaReplace></Properties></ReplaceUIScript><ReplaceUIScript id="CSE_TradeOverview_UI"><Properties><LoadOrder>49</LoadOrder><LuaContext>TradeOverview</LuaContext><LuaReplace>Core/Utilities/UI Replacements/CVS_CityStates_TradeOverview.lua</LuaReplace></Properties></ReplaceUIScript><ImportFiles id="CSE_Import"><Properties><LoadOrder>49</LoadOrder></Properties><File>Core/Utilities/UI Replacements/CityStates.lua</File><File>Core/Utilities/UI Replacements/CivilopediaPage_CityState.lua</File><File>Core/Utilities/UI Replacements/CVS_CityStates_TradeOverview.lua</File></ImportFiles><UpdateDatabase id="CSE_Globals_DB"><Properties><LoadOrder>70</LoadOrder></Properties><File>Core/CSE_Globals.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Civilizations"><Properties><LoadOrder>60</LoadOrder></Properties><File>Core/CSE_CityStates.sql</File></UpdateDatabase><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt></InGameActions>]]></InGameActionData>
+    <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="XP1"><GameCoreInUse>Expansion1</GameCoreInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Mod.Art.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core" />
+    <Folder Include="Core\Framework" />
+    <Folder Include="Core\Mod Support" />
+    <Folder Include="Core\Utilities" />
+    <Folder Include="Core\Utilities\UI Replacements" />
+    <Folder Include="Core\C_CityStates" />
+    <Folder Include="XLPs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\CSE_CityStates.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Globals.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Icons.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Localisation.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Types.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Framework\CSE_Master.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Framework\CSE_Schema.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Mod Support\CSE New City-State Template.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Utilities\UI Replacements\CityStates.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Utilities\UI Replacements\CivilopediaPage_CityState.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Utilities\UI Replacements\CVS_CityStates_TradeOverview.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\C_CityStates\CSE_Civilizations.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\C_CityStates\CVS_CityStates_Civilizations.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\C_CityStates\CVS_CityStates_Civilizations_Icons.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\C_CityStates\CVS_CityStates_Civilizations_Text.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\C_CityStates\CVS_CityStates_Improvements.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\C_CityStates\CVS_CityStates_ModCompatibility.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\C_CityStates\CVS_CityStates_Resources.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\C_CityStates\CVS_CityStates_UnitAbilities.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\C_CityStates\CVS_CityStates_Updates.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\Icons.xlp">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
