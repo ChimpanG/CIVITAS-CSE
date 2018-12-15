@@ -1,8 +1,8 @@
 /*
-	Catalhoyuk
-	~ Receive the Leather and Wool Luxury resources (not tradeable), which provide 6 Amenities each.
+	Alamut
+	~ Your cities may train Hashashin and Assassin units.
 
-	Authors: thecrazyscotsman, ChimpanG
+	Authors: thecrazyscotsman
 */
 
 -----------------------------------------------

@@ -19,6 +19,10 @@ Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE Rulesets Yangtze", "CSE
 EndProject
 Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE City-States Catalhoyuk", "CSE City-States Catalhoyuk\CSE City-States Catalhoyuk.civ6proj", "{D6FB9FB7-D0EA-4578-B5DD-2F95E963AA23}"
 EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE City-States Alamut", "CSE City-States Alamut\CSE City-States Alamut.civ6proj", "{306E6795-59C8-40DF-A385-8C704918CCEE}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE City-States Ampi", "CSE City-States Ampi\CSE City-States Ampi.civ6proj", "{313D3428-7882-4A9D-8267-582FA84808D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Civ6 = Default|Civ6
@@ -40,6 +44,10 @@ Global
 		{7BBF5857-5C3E-41A1-BD25-CD9A7CC0F7F5}.Default|Civ6.Build.0 = Default|Civ6
 		{D6FB9FB7-D0EA-4578-B5DD-2F95E963AA23}.Default|Civ6.ActiveCfg = Default|Civ6
 		{D6FB9FB7-D0EA-4578-B5DD-2F95E963AA23}.Default|Civ6.Build.0 = Default|Civ6
+		{306E6795-59C8-40DF-A385-8C704918CCEE}.Default|Civ6.ActiveCfg = Default|Civ6
+		{306E6795-59C8-40DF-A385-8C704918CCEE}.Default|Civ6.Build.0 = Default|Civ6
+		{313D3428-7882-4A9D-8267-582FA84808D5}.Default|Civ6.ActiveCfg = Default|Civ6
+		{313D3428-7882-4A9D-8267-582FA84808D5}.Default|Civ6.Build.0 = Default|Civ6
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

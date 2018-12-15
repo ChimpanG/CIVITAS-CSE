@@ -15,7 +15,7 @@ VALUES
 	("en_US",	"LOC_CIVILIZATION_CSE_ALAMUT_DESCRIPTION",	"{LOC_CIVILIZATION_CSE_ALAMUT_NAME} city-state"		),
 	("en_US",	"LOC_TRAIT_CSE_ALAMUT_NAME",				"{LOC_CIVILIZATION_CSE_ALAMUT_NAME} Suzerain Bonus"	),
 	("en_US",	"LOC_TRAIT_CSE_ALAMUT_DESCRIPTION",		
-	"Receive the [ICON_RESOURCE_CSE_LEATHER] Leather and [ICON_RESOURCE_CSE_WOOL] Wool Luxury resources (not tradeable), which provide 6 [ICON_AMENITIES] Amenities each."	),
+	"Your cities may train Hashashin units."	),
 	
 	("en_US",	"LOC_CITY_NAME_ALAMUT",						"{LOC_CIVILIZATION_CSE_ALAMUT_NAME}"	),
 	("en_US",	"LOC_CITY_NAME_KONYA",						"Lambesar"					),
