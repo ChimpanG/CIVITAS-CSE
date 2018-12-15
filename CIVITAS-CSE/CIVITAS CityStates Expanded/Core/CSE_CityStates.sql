@@ -127,6 +127,11 @@ WHERE	New = 1;
 -- StartBias
 -----------------------------------------------
 
+DELETE FROM StartBiasTerrains WHERE CivilizationType IN 'CIVILIZATION_'||(SELECT CityState FROM CSE_Master);
+DELETE FROM StartBiasFeatures WHERE CivilizationType IN 'CIVILIZATION_'||(SELECT CityState FROM CSE_Master);
+DELETE FROM StartBiasResources WHERE CivilizationType IN 'CIVILIZATION_'||(SELECT CityState FROM CSE_Master);
+DELETE FROM StartBiasRivers WHERE CivilizationType IN 'CIVILIZATION_'||(SELECT CityState FROM CSE_Master);
+
 INSERT INTO StartBiasTerrains (CivilizationType, TerrainType, Tier)
 SELECT	'CIVILIZATION_'||CityState,
 		'TERRAIN_'||Object,

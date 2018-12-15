@@ -56,3 +56,10 @@ SET		CityStateType =
 			THEN ProposedType
 			ELSE FallbackType
 		END;
+
+-----------------------------------------------
+-- CSE_StartBias
+-----------------------------------------------
+
+DELETE FROM CSE_StartBias
+WHERE	CityState NOT IN (SELECT * FROM CSE_Master);
