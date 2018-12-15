@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AssetObjects..XLP>
+	<m_Version>
+		<major>4</major>
+		<minor>0</minor>
+		<build>315</build>
+		<revision>805</revision>
+	</m_Version>
+	<m_ClassName text="UITexture"/>
+	<m_PackageName text="UI/Icons"/>
+	<m_Entries>
+		<Element>
+			<m_EntryID text="CSE_CATALHOYUK_ICON_22"/>
+			<m_ObjectName text="CSE_CATALHOYUK_ICON_22"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_CATALHOYUK_ICON_256"/>
+			<m_ObjectName text="CSE_CATALHOYUK_ICON_256"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_CATALHOYUK_ICON_30"/>
+			<m_ObjectName text="CSE_CATALHOYUK_ICON_30"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_CATALHOYUK_ICON_36"/>
+			<m_ObjectName text="CSE_CATALHOYUK_ICON_36"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_CATALHOYUK_ICON_44"/>
+			<m_ObjectName text="CSE_CATALHOYUK_ICON_44"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_CATALHOYUK_ICON_48"/>
+			<m_ObjectName text="CSE_CATALHOYUK_ICON_48"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_CATALHOYUK_ICON_50"/>
+			<m_ObjectName text="CSE_CATALHOYUK_ICON_50"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_CATALHOYUK_ICON_64"/>
+			<m_ObjectName text="CSE_CATALHOYUK_ICON_64"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_CATALHOYUK_ICON_80"/>
+			<m_ObjectName text="CSE_CATALHOYUK_ICON_80"/>
+		</Element>
+		<Element>
+			<m_EntryID text="RESOURCE_CSE_LEATHER_22"/>
+			<m_ObjectName text="RESOURCE_CSE_LEATHER_22"/>
+		</Element>
+		<Element>
+			<m_EntryID text="RESOURCE_CSE_LEATHER_256"/>
+			<m_ObjectName text="RESOURCE_CSE_LEATHER_256"/>
+		</Element>
+		<Element>
+			<m_EntryID text="RESOURCE_CSE_LEATHER_38"/>
+			<m_ObjectName text="RESOURCE_CSE_LEATHER_38"/>
+		</Element>
+		<Element>
+			<m_EntryID text="RESOURCE_CSE_LEATHER_50"/>
+			<m_ObjectName text="RESOURCE_CSE_LEATHER_50"/>
+		</Element>
+		<Element>
+			<m_EntryID text="RESOURCE_CSE_LEATHER_64"/>
+			<m_ObjectName text="RESOURCE_CSE_LEATHER_64"/>
+		</Element>
+		<Element>
+			<m_EntryID text="RESOURCE_CSE_WOOL_22"/>
+			<m_ObjectName text="RESOURCE_CSE_WOOL_22"/>
+		</Element>
+		<Element>
+			<m_EntryID text="RESOURCE_CSE_WOOL_256"/>
+			<m_ObjectName text="RESOURCE_CSE_WOOL_256"/>
+		</Element>
+		<Element>
+			<m_EntryID text="RESOURCE_CSE_WOOL_38"/>
+			<m_ObjectName text="RESOURCE_CSE_WOOL_38"/>
+		</Element>
+		<Element>
+			<m_EntryID text="RESOURCE_CSE_WOOL_50"/>
+			<m_ObjectName text="RESOURCE_CSE_WOOL_50"/>
+		</Element>
+		<Element>
+			<m_EntryID text="RESOURCE_CSE_WOOL_64"/>
+			<m_ObjectName text="RESOURCE_CSE_WOOL_64"/>
+		</Element>
+	</m_Entries>
+	<m_AllowedPlatforms>
+		<Element>WINDOWS</Element>
+		<Element>LINUX</Element>
+		<Element>MACOS</Element>
+		<Element>IOS</Element>
+	</m_AllowedPlatforms>
+</AssetObjects..XLP>
+

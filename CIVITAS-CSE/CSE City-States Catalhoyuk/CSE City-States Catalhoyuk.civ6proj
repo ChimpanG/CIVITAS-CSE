@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>CSE [ICON_GreatPerson] Catalhoyuk</Name>
+    <Guid>545023d5-8f17-4bc2-900c-62559a0f4a08</Guid>
+    <ProjectGuid>d6fb9fb7-d0ea-4578-b5dd-2f95e963aa23</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>Adds Catalhoyuk as a City-State for CIVITAS City-States Expanded.</Teaser>
+    <Description>Adds Catalhoyuk as a City-State for CIVITAS City-States Expanded.</Description>
+    <Authors>ChimpanG, thecrazyscotsman</Authors>
+    <SpecialThanks>
+    </SpecialThanks>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <AssemblyName>CSE City-States Catalhoyuk</AssemblyName>
+    <RootNamespace>CSE City-States Catalhoyuk</RootNamespace>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Catalhoyuk_DB"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Catalhoyuk.sql</File></UpdateDatabase><UpdateText id="CSE_Catalhoyuk_Text"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Catalhoyuk_Localisation.sql</File></UpdateText><UpdateIcons id="CSE_Catalhoyuk_Icons"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Catalhoyuk_Icons.sql</File></UpdateIcons><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt></InGameActions>]]></InGameActionData>
+    <AssociationData><![CDATA[<Associations>
+  <Dependency type="Mod" title="CIVITAS [ICON_Envoy] City-States Expanded" id="7d0b57ba-6a5c-4de0-ac10-e1e464ac82f6" />
+  <Reference type="Mod" title="CSE [ICON_Government] Agricultural Type" id="b7cfd7df-1335-43d7-b0f5-9615e3e3c205" />
+</Associations>]]></AssociationData>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Mod.Art.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\CSE_Catalhoyuk.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Catalhoyuk_Icons.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Catalhoyuk_Localisation.sql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
