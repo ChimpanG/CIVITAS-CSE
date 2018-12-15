@@ -14,7 +14,7 @@ INSERT INTO ModCheck (ModType) VALUES ('CITY_STATES_EXPANDED');
 -----------------------------------------------
 
 INSERT INTO CSE_Master
-		(CityState,			New,	CityStateType,		FallbackCity,		Ethnicity,				Introduced,	Removed	)
+		(CityState,			New,	ProposedType,		FallbackCity,		Ethnicity,				Requires,	Removed	)
 VALUES	('AKKAD',			0,		'MILITARISTIC',		NULL,				'ETHNICITY_MEDIT',		'XP2',		NULL	),
 		('AMSTERDAM',		0,		'TRADE',			'GRONIGEN',			'ETHNICITY_EURO',		'BASE',		'XP1'	),
 		('ANTANANARIVO',	0,		'CULTURAL',			'TBD',				'ETHNICITY_MUGHAL',		'VIKINGS',	NULL	),
@@ -35,7 +35,7 @@ VALUES	('AKKAD',			0,		'MILITARISTIC',		NULL,				'ETHNICITY_MEDIT',		'XP2',		NUL
 		('HONG_KONG',		0,		'PRODUCTION',		'TBD',				'ETHNICITY_ASIAN',		'BASE',		NULL	),
 		('JAKARTA',			0,		'TRADE',			'BANDAR_BRUNEI',	'ETHNICITY_ASIAN',		'BASE',		NULL	),
 		('JERUSALEM',		0,		'RELIGIOUS',		'TBD',				'ETHNICITY_MEDIT',		'BASE',		NULL	),
-		('KABUL',			0,		'MILITARISTIC',		'TBD',				'ETHNICITY_MEDIT',		'BASE',		'XP2'	),
+		('KABUL',			0,		'MILITARISTIC',		'TBD',				'ETHNICITY_MEDIT',		'BASE',		NULL	),
 		('KANDY',			0,		'RELIGIOUS',		'TBD',				'ETHNICITY_AFRICAN',	'BASE',		NULL	),
 		('KUMASI',			0,		'CULTURAL',			'TBD',				'ETHNICITY_AFRICAN',	'BASE',		NULL	),
 		('LA_VENTA',		0,		'RELIGIOUS',		'TBD',				'ETHNICITY_SOUTHAM',	'BASE',		NULL	),

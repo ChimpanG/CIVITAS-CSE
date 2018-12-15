@@ -25,11 +25,12 @@ CREATE TABLE IF NOT EXISTS CSE_Master
 	(
 	CityState		TEXT		NOT NULL,
 	New				BOOLEAN		DEFAULT 1,
-	CityStateType	TEXT		NOT NULL, 
+	CityStateType	TEXT		DEFAULT NULL, 
+	ProposedType	TEXT		NOT NULL,
 	FallbackType	TEXT		DEFAULT NULL, 
 	FallbackCity	TEXT		NOT NULL, 
 	Ethnicity		TEXT		NOT NULL,
-	Introduced		TEXT		DEFAULT NULL,
+	Requires		TEXT		DEFAULT NULL,
 	Removed			TEXT		DEFAULT NULL,
 
 	PRIMARY KEY (CityState)
@@ -42,6 +43,11 @@ CREATE TABLE IF NOT EXISTS CSE_StartBias
 	ObjectType		TEXT	NOT NULL, 
 	Object			TEXT	DEFAULT NULL, 
 	Tier			TEXT	NOT NULL
+	);
+
+CREATE TABLE IF NOT EXISTS CSE_Validation
+	(
+	Version			TEXT	DEFAULT NULL
 	);
 
 CREATE TABLE IF NOT EXISTS CSE_UserSettings

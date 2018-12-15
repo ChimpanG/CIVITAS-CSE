@@ -29,89 +29,17 @@ WHERE	New = 1;
 -- TypeProperties
 -----------------------------------------------
 
+UPDATE	TypeProperties AS a, CSE_Master AS b
+SET		a.Value = b.CityStateType
+WHERE	b.CityStateType = a.Value
+AND		b.New = 0;
+
 INSERT INTO TypeProperties (Type, Name, Value)
 SELECT	'CIVILIZATION_'||CityState,
 		'CityStateCategory',
 		CityStateType
 FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType IN ('SCIENTIFIC', 'CULTURAL', 'RELIGIOUS', 'TRADE', 'INDUSTRIAL', 'MILITARISTIC');
-
--- AGRICULTURAL
-INSERT INTO TypeProperties (Type, Name, Value)
-SELECT	'CIVILIZATION_'||CityState,
-		'CityStateCategory',
-		CityStateType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_AGRICULTURAL'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_AGRICULTURAL');
-
-INSERT INTO TypeProperties (Type, Name, Value)
-SELECT	'CIVILIZATION_'||CityState,
-		'CityStateCategory',
-		FallbackType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_AGRICULTURAL'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_AGRICULTURAL');
-
--- CONSULAR
-INSERT INTO TypeProperties (Type, Name, Value)
-SELECT	'CIVILIZATION_'||CityState,
-		'CityStateCategory',
-		CityStateType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_CONSULAR'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_CONSULAR');
-
-INSERT INTO TypeProperties (Type, Name, Value)
-SELECT	'CIVILIZATION_'||CityState,
-		'CityStateCategory',
-		FallbackType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_CONSULAR'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_CONSULAR');
-
--- ENTERTAINMENT
-INSERT INTO TypeProperties (Type, Name, Value)
-SELECT	'CIVILIZATION_'||CityState,
-		'CityStateCategory',
-		CityStateType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_ENTERTAINMENT'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_ENTERTAINMENT');
-
-INSERT INTO TypeProperties (Type, Name, Value)
-SELECT	'CIVILIZATION_'||CityState,
-		'CityStateCategory',
-		FallbackType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_ENTERTAINMENT'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_ENTERTAINMENT');
-
--- MARITIME
-INSERT INTO TypeProperties (Type, Name, Value)
-SELECT	'CIVILIZATION_'||CityState,
-		'CityStateCategory',
-		CityStateType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_MARITIME'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_MARITIME');
-
-INSERT INTO TypeProperties (Type, Name, Value)
-SELECT	'CIVILIZATION_'||CityState,
-		'CityStateCategory',
-		FallbackType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_MARITIME'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_MARITIME');
+WHERE	New = 1;
 
 -----------------------------------------------
 -- Civilizations
@@ -149,89 +77,17 @@ WHERE	New = 1;
 -- Leaders
 -----------------------------------------------
 
+UPDATE	Leaders AS a, CSE_Master AS b
+SET		a.InheritFrom = 'LEADER_MINOR_CIV_'||b.CityState
+WHERE	'LEADER_'||b.CityState = a.LeaderType
+AND		b.New = 0;
+
 INSERT INTO Leaders (LeaderType, Name, InheritFrom)
 SELECT	'LEADER_'||CityState,
 		'LOC_CIVILIZATION_'||CityState||'_NAME',
 		'LEADER_MINOR_CIV_'||CityStateType
 FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType IN ('SCIENTIFIC', 'CULTURAL', 'RELIGIOUS', 'TRADE', 'INDUSTRIAL', 'MILITARISTIC');
-
--- AGRICULTURAL
-INSERT INTO Leaders (LeaderType, Name, InheritFrom)
-SELECT	'LEADER_'||CityState,
-		'LOC_CIVILIZATION_'||CityState||'_NAME',
-		'LEADER_MINOR_CIV_'||CityStateType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_AGRICULTURAL'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_AGRICULTURAL');
-
-INSERT INTO Leaders (LeaderType, Name, InheritFrom)
-SELECT	'LEADER_'||CityState,
-		'LOC_CIVILIZATION_'||CityState||'_NAME',
-		'LEADER_MINOR_CIV_'||FallbackType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_AGRICULTURAL'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_AGRICULTURAL');
-
--- CONSULAR
-INSERT INTO Leaders (LeaderType, Name, InheritFrom)
-SELECT	'LEADER_'||CityState,
-		'LOC_CIVILIZATION_'||CityState||'_NAME',
-		'LEADER_MINOR_CIV_'||CityStateType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_CONSULAR'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_CONSULAR');
-
-INSERT INTO Leaders (LeaderType, Name, InheritFrom)
-SELECT	'LEADER_'||CityState,
-		'LOC_CIVILIZATION_'||CityState||'_NAME',
-		'LEADER_MINOR_CIV_'||FallbackType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_CONSULAR'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_CONSULAR');
-
--- ENTERTAINMENT
-INSERT INTO Leaders (LeaderType, Name, InheritFrom)
-SELECT	'LEADER_'||CityState,
-		'LOC_CIVILIZATION_'||CityState||'_NAME',
-		'LEADER_MINOR_CIV_'||CityStateType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_ENTERTAINMENT'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_ENTERTAINMENT');
-
-INSERT INTO Leaders (LeaderType, Name, InheritFrom)
-SELECT	'LEADER_'||CityState,
-		'LOC_CIVILIZATION_'||CityState||'_NAME',
-		'LEADER_MINOR_CIV_'||FallbackType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_ENTERTAINMENT'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_ENTERTAINMENT');
-
--- MARITIME
-INSERT INTO Leaders (LeaderType, Name, InheritFrom)
-SELECT	'LEADER_'||CityState,
-		'LOC_CIVILIZATION_'||CityState||'_NAME',
-		'LEADER_MINOR_CIV_'||CityStateType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_MARITIME'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_MARITIME');
-
-INSERT INTO Leaders (LeaderType, Name, InheritFrom)
-SELECT	'LEADER_'||CityState,
-		'LOC_CIVILIZATION_'||CityState||'_NAME',
-		'LEADER_MINOR_CIV_'||FallbackType
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_MARITIME'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_MARITIME');
+WHERE	New = 1;
 
 -----------------------------------------------
 -- LeaderTraits
@@ -265,100 +121,7 @@ SELECT	'CIVILIZATION_'||CityState,
 		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY',
 		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY'
 FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType IN ('SCIENTIFIC', 'CULTURAL', 'RELIGIOUS', 'TRADE', 'INDUSTRIAL', 'MILITARISTIC');
-
--- AGRICULTURAL
-INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
-SELECT	'CIVILIZATION_'||CityState,
-		'Minor',
-		'COLOR_PLAYER_CITY_STATE_PRIMARY',
-		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY',
-		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY'
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_AGRICULTURAL'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_AGRICULTURAL');
-
-INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
-SELECT	'CIVILIZATION_'||CityState,
-		'Minor',
-		'COLOR_PLAYER_CITY_STATE_PRIMARY',
-		'COLOR_PLAYER_CITY_STATE_'||FallbackType||'_SECONDARY',
-		'COLOR_PLAYER_CITY_STATE_'||FallbackType||'_SECONDARY'
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_AGRICULTURAL'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_AGRICULTURAL');
-
--- CONSULAR
-INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
-SELECT	'CIVILIZATION_'||CityState,
-		'Minor',
-		'COLOR_PLAYER_CITY_STATE_PRIMARY',
-		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY',
-		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY'
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_CONSULAR'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_CONSULAR');
-
-INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
-SELECT	'CIVILIZATION_'||CityState,
-		'Minor',
-		'COLOR_PLAYER_CITY_STATE_PRIMARY',
-		'COLOR_PLAYER_CITY_STATE_'||FallbackType||'_SECONDARY',
-		'COLOR_PLAYER_CITY_STATE_'||FallbackType||'_SECONDARY'
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_CONSULAR'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_CONSULAR');
-
--- ENTERTAINMENT
-INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
-SELECT	'CIVILIZATION_'||CityState,
-		'Minor',
-		'COLOR_PLAYER_CITY_STATE_PRIMARY',
-		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY',
-		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY'
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_ENTERTAINMENT'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_ENTERTAINMENT');
-
-INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
-SELECT	'CIVILIZATION_'||CityState,
-		'Minor',
-		'COLOR_PLAYER_CITY_STATE_PRIMARY',
-		'COLOR_PLAYER_CITY_STATE_'||FallbackType||'_SECONDARY',
-		'COLOR_PLAYER_CITY_STATE_'||FallbackType||'_SECONDARY'
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_ENTERTAINMENT'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_ENTERTAINMENT');
-
--- MARITIME
-INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
-SELECT	'CIVILIZATION_'||CityState,
-		'Minor',
-		'COLOR_PLAYER_CITY_STATE_PRIMARY',
-		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY',
-		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY'
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_MARITIME'
-AND EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_MARITIME');
-
-INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
-SELECT	'CIVILIZATION_'||CityState,
-		'Minor',
-		'COLOR_PLAYER_CITY_STATE_PRIMARY',
-		'COLOR_PLAYER_CITY_STATE_'||FallbackType||'_SECONDARY',
-		'COLOR_PLAYER_CITY_STATE_'||FallbackType||'_SECONDARY'
-FROM	CSE_Master
-WHERE	New = 1
-AND		CityStateType = 'CSE_MARITIME'
-AND NOT EXISTS (SELECT * FROM ModCheck WHERE ModType = 'CSE_MARITIME');
+WHERE	New = 1;
 
 -----------------------------------------------
 -- StartBias
