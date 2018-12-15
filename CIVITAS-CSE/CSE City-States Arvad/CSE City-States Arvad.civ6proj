@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>City-States Expanded [ICON_GreatPerson] Arvad</Name>
+    <Guid>7577ce68-78f7-482d-a3a2-a469d20bad98</Guid>
+    <ProjectGuid>3195d0f3-3629-4043-9ac0-2872994fa0b3</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>Adds Arvad as a new City-State for CIVITAS City-States Expanded.</Teaser>
+    <Description>Adds Arvad as a new City-State for CIVITAS City-States Expanded.</Description>
+    <Authors>thecrazyscotsman</Authors>
+    <SpecialThanks>
+    </SpecialThanks>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <AssemblyName>CSE City-States Arvad</AssemblyName>
+    <RootNamespace>CSE City-States Arvad</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Mod.Art.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
