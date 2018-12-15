@@ -33,6 +33,7 @@
     <Folder Include="Core\" />
     <Folder Include="Core\Framework\" />
     <Folder Include="Core\XP1\" />
+    <Folder Include="XLPs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Core\CSE_CityStates.sql">
@@ -54,6 +55,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\XP1\CSE_Localisation_XP1.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\Icons.xlp">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>
