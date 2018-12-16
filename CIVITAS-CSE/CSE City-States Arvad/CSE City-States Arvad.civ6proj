@@ -17,12 +17,30 @@
     <SupportsHotSeat>true</SupportsHotSeat>
     <AssemblyName>CSE City-States Arvad</AssemblyName>
     <RootNamespace>CSE City-States Arvad</RootNamespace>
+    <AssociationData><![CDATA[<Associations>
+  <Dependency type="Mod" title="CIVITAS [ICON_ENVOY] City-States Expanded" id="7d0b57ba-6a5c-4de0-ac10-e1e464ac82f6" />
+</Associations>]]></AssociationData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Arvad_DB"><Properties><LoadOrder>55</LoadOrder></Properties></UpdateDatabase><UpdateIcons id="CSE_Arvad_Icons"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Arvad_Icons.sql</File></UpdateIcons><UpdateText id="CSE_Arvad_Text"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Arvad_Localisation.sql</File></UpdateText><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt></InGameActions>]]></InGameActionData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
     <OutputPath>.</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Mod.Art.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\CSE_Arvad.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Arvad_Icons.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Arvad_Localisation.sql">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
 </Project>
