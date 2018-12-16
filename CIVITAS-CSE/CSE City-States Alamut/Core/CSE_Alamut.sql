@@ -159,9 +159,9 @@ FROM	Eras WHERE EraType NOT IN ('ERA_ANCIENT');
 -----------------------------------------------
 
 INSERT INTO Modifiers
-		(ModifierId,						ModifierType,					SubjectRequirementSetId				)
-VALUES	('CSE_ALAMUT_SUZERAIN_HASHASHIN',	'MODTYPE_CSE_ATTACH_PLAYERS',	'REQSET_CSE_PLAYER_IS_NOT_SUZERAIN'	), -- Inverting this because we can only disable unit builds, not enable.
-		('CSE_ALAMUT_HASHASHIN',			'MODTYPE_CSE_DISABLE_UNIT',		NULL								);
+		(ModifierId,						ModifierType,							SubjectRequirementSetId				)
+VALUES	('CSE_ALAMUT_SUZERAIN_HASHASHIN',	'MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER',	'REQSET_CSE_PLAYER_IS_NOT_SUZERAIN'	), -- Inverting this because we can only disable unit builds, not enable.
+		('CSE_ALAMUT_HASHASHIN',			'MODTYPE_CSE_DISABLE_UNIT',				NULL								);
 
 INSERT INTO Modifiers
 		(ModifierId,								ModifierType,					SubjectRequirementSetId	)

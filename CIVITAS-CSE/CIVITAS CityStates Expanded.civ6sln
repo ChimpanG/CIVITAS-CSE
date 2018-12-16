@@ -23,6 +23,12 @@ Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE City-States Alamut", "C
 EndProject
 Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE City-States Ampi", "CSE City-States Ampi\CSE City-States Ampi.civ6proj", "{313D3428-7882-4A9D-8267-582FA84808D5}"
 EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE City-States Anuradhapura", "CSE City-States Anuradhapura\CSE City-States Anuradhapura.civ6proj", "{6DE98634-D275-4EF7-BBA6-102B71FF8202}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE City-States Arvad", "CSE City-States Arvad\CSE City-States Arvad.civ6proj", "{3195D0F3-3629-4043-9AC0-2872994FA0B3}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CSE City-States Azcapotzalco", "CSE City-States Azcapotzalco\CSE City-States Azcapotzalco.civ6proj", "{4F6AE24B-8D97-4681-B126-77E6635F8447}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Civ6 = Default|Civ6
@@ -48,6 +54,12 @@ Global
 		{306E6795-59C8-40DF-A385-8C704918CCEE}.Default|Civ6.Build.0 = Default|Civ6
 		{313D3428-7882-4A9D-8267-582FA84808D5}.Default|Civ6.ActiveCfg = Default|Civ6
 		{313D3428-7882-4A9D-8267-582FA84808D5}.Default|Civ6.Build.0 = Default|Civ6
+		{6DE98634-D275-4EF7-BBA6-102B71FF8202}.Default|Civ6.ActiveCfg = Default|Civ6
+		{6DE98634-D275-4EF7-BBA6-102B71FF8202}.Default|Civ6.Build.0 = Default|Civ6
+		{3195D0F3-3629-4043-9AC0-2872994FA0B3}.Default|Civ6.ActiveCfg = Default|Civ6
+		{3195D0F3-3629-4043-9AC0-2872994FA0B3}.Default|Civ6.Build.0 = Default|Civ6
+		{4F6AE24B-8D97-4681-B126-77E6635F8447}.Default|Civ6.ActiveCfg = Default|Civ6
+		{4F6AE24B-8D97-4681-B126-77E6635F8447}.Default|Civ6.Build.0 = Default|Civ6
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

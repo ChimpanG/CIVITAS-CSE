@@ -5,6 +5,8 @@
 
 -----------------------------------------------
 -- CSE_Validation
+
+-- This will determine what is active for the player
 -----------------------------------------------
 
 INSERT INTO CSE_Validation (Version)
@@ -12,7 +14,7 @@ VALUES	('BASE');
 
 INSERT INTO CSE_Validation (Version)
 SELECT	'VIKINGS'
-WHERE EXISTS (SELECT * FROM Types WHERE Type IN
+WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
 (
 'CIVILIZATION_AUCKLAND',
 'CIVILIZATION_ANTANANARIVO',
@@ -25,41 +27,54 @@ WHERE EXISTS (SELECT * FROM Types WHERE Type IN
 'FEATURE_EYJAFJALLAJOKULL',
 'FEATURE_LYSEFJORDEN',
 'FEATURE_GIANTS_CAUSEWAY'
-);
+));
 
 INSERT INTO CSE_Validation (Version)
 SELECT	'XP1'
-WHERE EXISTS (SELECT * FROM Types WHERE Type IN
+WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
 (
 'CIVILIZATION_CREE'
-);
+));
 
 INSERT INTO CSE_Validation (Version)
 SELECT	'XP2'
-WHERE EXISTS (SELECT * FROM Types WHERE Type IN
+WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
 (
 'CIVILIZATION_HUNGARY'
-);
+));
 
 -----------------------------------------------
 -- CSE_Master
 -----------------------------------------------
 
+-- Remove City-States from Master depending on active DLC, XP etc
 DELETE FROM CSE_Master
 WHERE	Requires NOT IN (SELECT * FROM CSE_Validation)
 OR		Removed IN (SELECT * FROM CSE_Validation);
 
+-- Update City-State type based on whether their type exists in classes
 UPDATE	CSE_Master
 SET		CityStateType =
 		CASE
-			WHEN ProposedType IN (SELECT * FROM ModCheck)
+			WHEN ProposedType IN (SELECT Type FROM C15_MinorCivilization_CityStateClassTypes)
 			THEN ProposedType
 			ELSE FallbackType
 		END;
+
+-- Update hidden columns for less concatenation going forward
+UPDATE	CSE_Master
+SET		CivilizationType = 'CIVILIZATION_'||CityState,
+		LeaderType = 'LEADER_MINOR_CIV_'||CityState,
+		CityStateLeaderType = 'LEADER_MINOR_CIV_'||CityStateType;
 
 -----------------------------------------------
 -- CSE_StartBias
 -----------------------------------------------
 
+-- Delete StartBias for deleted City-States in Master
 DELETE FROM CSE_StartBias
-WHERE	CityState NOT IN (SELECT * FROM CSE_Master);
+WHERE	CityState NOT IN (SELECT CityState FROM CSE_Master);
+
+-- Update hidden columns for less concatenation going forward
+UPDATE	CSE_StartBias
+SET		CivilizationType = 'CIVILIZATION_'||CityState;

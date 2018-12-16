@@ -8,13 +8,13 @@
 -----------------------------------------------
 
 INSERT INTO Types (Type, Kind)
-SELECT	'CIVILIZATION_'||CityState,
+SELECT	CivilizationType,
 		'KIND_CIVILIZATION'
 FROM	CSE_Master
 WHERE	New = 1;
 
 INSERT INTO Types (Type, Kind)
-SELECT	'LEADER_'||CityState,
+SELECT	LeaderType,
 		'KIND_LEADER'
 FROM	CSE_Master
 WHERE	New = 1;
@@ -29,13 +29,18 @@ WHERE	New = 1;
 -- TypeProperties
 -----------------------------------------------
 
-UPDATE	TypeProperties AS a, CSE_Master AS b
-SET		a.Value = b.CityStateType
-WHERE	b.CityStateType = a.Value
-AND		b.New = 0;
+UPDATE	TypeProperties
+SET Value =
+	(SELECT	CityStateType
+	FROM	CSE_Master
+	WHERE	CivilizationType = TypeProperties.Type)
+WHERE EXISTS
+	(SELECT	CityStateType
+	FROM	CSE_Master
+	WHERE	CivilizationType = TypeProperties.Type);
 
 INSERT INTO TypeProperties (Type, Name, Value)
-SELECT	'CIVILIZATION_'||CityState,
+SELECT	CivilizationType,
 		'CityStateCategory',
 		CityStateType
 FROM	CSE_Master
@@ -52,10 +57,10 @@ SET		RandomCityNameDepth = 2
 WHERE	StartingCivilizationLevelType = 'CIVILIZATION_LEVEL_CITY_STATE';
 
 INSERT INTO Civilizations (CivilizationType, Name, Description, Adjective, StartingCivilizationLevelType, RandomCityNameDepth, Ethnicity)
-SELECT	'CIVILIZATION_'||CityState,
-		'LOC_CIVILIZATION_'||CityState||'_NAME',
-		'LOC_CIVILIZATION_'||CityState||'_DESCRIPTION',
-		'LOC_CIVILIZATION_'||CityState||'_ADJECTIVE',
+SELECT	CivilizationType,
+		'LOC_'||CivilizationType||'_NAME',
+		'LOC_'||CivilizationType||'_DESCRIPTION',
+		'LOC_'||CivilizationType||'_ADJECTIVE',
 		'CIVILIZATION_LEVEL_CITY_STATE',
 		2,
 		Ethnicity
@@ -67,8 +72,8 @@ WHERE	New = 1;
 -----------------------------------------------
 
 INSERT INTO CivilizationLeaders (CivilizationType, LeaderType, CapitalName)
-SELECT	'CIVILIZATION_'||CityState,
-		'LEADER_'||CityState,
+SELECT	CivilizationType,
+		LeaderType,
 		'LOC_CITY_NAME_'||CityState
 FROM	CSE_Master
 WHERE	New = 1;
@@ -77,15 +82,20 @@ WHERE	New = 1;
 -- Leaders
 -----------------------------------------------
 
-UPDATE	Leaders AS a, CSE_Master AS b
-SET		a.InheritFrom = 'LEADER_MINOR_CIV_'||b.CityState
-WHERE	'LEADER_'||b.CityState = a.LeaderType
-AND		b.New = 0;
+UPDATE	Leaders
+SET InheritFrom	= 
+	(SELECT	CityStateLeaderType
+	FROM	CSE_Master
+	WHERE	LeaderType = TypeProperties.LeaderType)
+WHERE EXISTS
+	(SELECT	CityStateLeaderType
+	FROM	CSE_Master
+	WHERE	LeaderType = TypeProperties.LeaderType);
 
 INSERT INTO Leaders (LeaderType, Name, InheritFrom)
-SELECT	'LEADER_'||CityState,
-		'LOC_CIVILIZATION_'||CityState||'_NAME',
-		'LEADER_MINOR_CIV_'||CityStateType
+SELECT	LeaderType,
+		'LOC_'||CivilizationType||'_NAME',
+		CityStateLeaderType
 FROM	CSE_Master
 WHERE	New = 1;
 
@@ -94,7 +104,7 @@ WHERE	New = 1;
 -----------------------------------------------
 
 INSERT INTO LeaderTraits (LeaderType, TraitType)
-SELECT	'LEADER_'||CityState,
+SELECT	LeaderType,
 		'TRAIT_'||CityState
 FROM	CSE_Master
 WHERE	New = 1;
@@ -115,7 +125,7 @@ WHERE	New = 1;
 -----------------------------------------------
 
 INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
-SELECT	'CIVILIZATION_'||CityState,
+SELECT	CivilizationType,
 		'Minor',
 		'COLOR_PLAYER_CITY_STATE_PRIMARY',
 		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY',
@@ -127,13 +137,13 @@ WHERE	New = 1;
 -- StartBias
 -----------------------------------------------
 
-DELETE FROM StartBiasTerrains WHERE CivilizationType IN 'CIVILIZATION_'||(SELECT CityState FROM CSE_Master);
-DELETE FROM StartBiasFeatures WHERE CivilizationType IN 'CIVILIZATION_'||(SELECT CityState FROM CSE_Master);
-DELETE FROM StartBiasResources WHERE CivilizationType IN 'CIVILIZATION_'||(SELECT CityState FROM CSE_Master);
-DELETE FROM StartBiasRivers WHERE CivilizationType IN 'CIVILIZATION_'||(SELECT CityState FROM CSE_Master);
+DELETE FROM StartBiasTerrains WHERE CivilizationType IN (SELECT CivilizationType FROM CSE_Master);
+DELETE FROM StartBiasFeatures WHERE CivilizationType IN (SELECT CivilizationType FROM CSE_Master);
+DELETE FROM StartBiasResources WHERE CivilizationType IN (SELECT CivilizationType FROM CSE_Master);
+DELETE FROM StartBiasRivers WHERE CivilizationType IN (SELECT CivilizationType FROM CSE_Master);
 
 INSERT INTO StartBiasTerrains (CivilizationType, TerrainType, Tier)
-SELECT	'CIVILIZATION_'||CityState,
+SELECT	CivilizationType,
 		'TERRAIN_'||Object,
 		Tier
 FROM	CSE_StartBias
@@ -141,7 +151,7 @@ WHERE	New = 1
 AND		ObjectType = 'TERRAIN';
 
 INSERT INTO StartBiasFeatures (CivilizationType, FeatureType, Tier)
-SELECT	'CIVILIZATION_'||CityState,
+SELECT	CivilizationType,
 		'FEATURE_'||Object,
 		Tier
 FROM	CSE_StartBias
@@ -149,7 +159,7 @@ WHERE	New = 1
 AND		ObjectType = 'FEATURE';
 
 INSERT INTO StartBiasResources (CivilizationType, ResourceType, Tier)
-SELECT	'CIVILIZATION_'||CityState,
+SELECT	CivilizationType,
 		'RESOURCE_'||Object,
 		Tier
 FROM	CSE_StartBias
@@ -157,7 +167,7 @@ WHERE	New = 1
 AND		ObjectType = 'RESOURCE';
 
 INSERT INTO StartBiasRivers (CivilizationType, Tier)
-SELECT	'CIVILIZATION_'||CityState,
+SELECT	CivilizationType,
 		Tier
 FROM	CSE_StartBias
 WHERE	New = 1
@@ -168,13 +178,13 @@ AND		ObjectType = 'RIVER';
 -----------------------------------------------
 
 INSERT INTO CityNames (CivilizationType, CityName)
-SELECT	'CIVILIZATION_'||CityState,
+SELECT	CivilizationType,
 		'LOC_CITY_NAME_'||CityState
 FROM	CSE_Master
 WHERE	New = 1;
 
 INSERT INTO CityNames (CivilizationType, CityName)
-SELECT	'CIVILIZATION_'||CityState,
+SELECT	CivilizationType,
 		'LOC_CITY_NAME_'||FallbackCity
 FROM	CSE_Master
 WHERE	New = 1
