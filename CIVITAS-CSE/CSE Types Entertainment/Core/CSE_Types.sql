@@ -4,6 +4,14 @@
 */
 
 -----------------------------------------------
+-- CSE_ClassTypes
+-----------------------------------------------
+
+INSERT INTO CSE_ClassTypes
+		(Type,					Color,				BonusIcon,								TypeIcon							)
+VALUES	('CSE_ENTERTAINMENT',	'255,100,170,255',	'ICON_ENVOY_BONUS_CSE_ENTERTAINMENT',	'ICON_CITYSTATE_CSE_ENTERTAINMENT'	);
+
+-----------------------------------------------
 -- Types
 -----------------------------------------------
 
@@ -108,25 +116,9 @@ VALUES	('REQ_CSE_CITY_HAS_ARENA',	'BuildingType',	'BUILDING_ARENA'	),
 		('REQ_CSE_CITY_HAS_ZOO',	'BuildingType',	'BUILDING_ZOO'		);
 
 -----------------------------------------------
--- Colors
------------------------------------------------
-
-INSERT INTO Colors 
-		(Type,													Color				)
-VALUES	('COLOR_PLAYER_CITY_STATE_CSE_ENTERTAINMENT_SECONDARY',	'255,100,170,255'	);
-
------------------------------------------------
 -- CivilopediaPageGroups
 -----------------------------------------------
 
 INSERT INTO CivilopediaPageGroups 
 		(SectionID, 	PageGroupId,			Name, 														VisibleIfEmpty, SortIndex	)
 VALUES	('CITYSTATES',	'CSE_ENTERTAINMENT',	'LOC_PEDIA_CITYSTATES_PAGEGROUP_CSE_ENTERTAINMENT_NAME',	0,				10			);
-
------------------------------------------------
--- C15_MinorCivilization_CityStateClassTypes
------------------------------------------------
-
-INSERT INTO C15_MinorCivilization_CityStateClassTypes
-		(Type,					TypeName,									LeaderType,								SmallBonus,												MedBonus,												LargeBonus,												BonusIcon,								TypeIcon							)
-VALUES	('CSE_ENTERTAINMENT',	'LOC_CITY_STATES_TYPE_CSE_ENTERTAINMENT',	'LEADER_MINOR_CIV_CSE_ENTERTAINMENT',	'LOC_CSE_ENTERTAINMENT_TRAIT_SMALL_INFLUENCE_BONUS',	'LOC_CSE_ENTERTAINMENT_TRAIT_MEDIUM_INFLUENCE_BONUS',	'LOC_CSE_ENTERTAINMENT_TRAIT_LARGE_INFLUENCE_BONUS',	'ICON_ENVOY_BONUS_CSE_ENTERTAINMENT',	'ICON_CITYSTATE_CSE_ENTERTAINMENT'	);

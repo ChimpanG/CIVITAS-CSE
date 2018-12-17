@@ -13,7 +13,7 @@ include("TradeOverview");
 
 -- C15 --
 local tCityStateTypes = {}
-for row in GameInfo.C15_MinorCivilization_CityStateClassTypes() do
+for row in GameInfo.CSE_ClassTypes() do
 	tCityStateTypes[row.LeaderType]= row.TypeIcon
 end
 -- /C15 --

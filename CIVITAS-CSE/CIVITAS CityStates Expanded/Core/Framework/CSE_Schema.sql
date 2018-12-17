@@ -7,16 +7,18 @@
 -- New Tables
 -----------------------------------------------
 
-CREATE TABLE IF NOT EXISTS C15_MinorCivilization_CityStateClassTypes 
+CREATE TABLE IF NOT EXISTS CSE_ClassTypes
 	(
 	Type		TEXT	NOT NULL, 
-	LeaderType	TEXT	NOT NULL, 
-	TypeName	TEXT	NOT NULL, 
-	SmallBonus	TEXT	NOT NULL, 
-	MedBonus	TEXT	NOT NULL, 
-	LargeBonus	TEXT	NOT NULL, 
-	BonusIcon	TEXT	NOT NULL, 
-	TypeIcon	TEXT	NOT NULL, 
+	LeaderType	TEXT	DEFAULT NULL, 
+	TypeName	TEXT	DEFAULT NULL, 
+	SmallBonus	TEXT	DEFAULT NULL, 
+	MediumBonus	TEXT	DEFAULT NULL, 
+	LargeBonus	TEXT	DEFAULT NULL, 
+	BonusIcon	TEXT	DEFAULT NULL, 
+	TypeIcon	TEXT	DEFAULT NULL, 
+	Color		TEXT	DEFAULT NULL,
+	ColorRef	TEXT	DEFAULT NULL,
 
 	PRIMARY KEY (Type)
 	);
@@ -35,6 +37,7 @@ CREATE TABLE IF NOT EXISTS CSE_Master
 	Ethnicity			TEXT		DEFAULT NULL,
 	Requires			TEXT		DEFAULT NULL,
 	Removed				TEXT		DEFAULT NULL,
+	ColorRef			TEXT		DEFAULT NULL,
 
 	PRIMARY KEY (CityState)
 	);

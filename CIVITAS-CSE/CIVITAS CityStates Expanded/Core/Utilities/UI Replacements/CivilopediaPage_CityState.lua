@@ -4,7 +4,7 @@
 
 -- C15 --
 local tCityStateTypes = {}
-for row in GameInfo.C15_MinorCivilization_CityStateClassTypes() do
+for row in GameInfo.CSE_ClassTypes() do
 	tCityStateTypes[row.Type] = {TypeName = row.TypeName, LeaderType = row.LeaderType, TypeIcon = row.TypeIcon,	SecondaryColor = row.SecondaryColor} -- Urgh filthy fuckin workaround
 end
 -- /C15 --

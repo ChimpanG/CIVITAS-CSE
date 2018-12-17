@@ -1,5 +1,5 @@
 /*
-	Civilizations
+	City-States
 	Authors: thecrazyscotsman, ChimpanG
 */
 
@@ -86,11 +86,11 @@ UPDATE	Leaders
 SET InheritFrom	= 
 	(SELECT	CityStateLeaderType
 	FROM	CSE_Master
-	WHERE	LeaderType = TypeProperties.LeaderType)
+	WHERE	LeaderType = Leaders.LeaderType)
 WHERE EXISTS
 	(SELECT	CityStateLeaderType
 	FROM	CSE_Master
-	WHERE	LeaderType = TypeProperties.LeaderType);
+	WHERE	LeaderType = Leaders.LeaderType);
 
 INSERT INTO Leaders (LeaderType, Name, InheritFrom)
 SELECT	LeaderType,
@@ -124,14 +124,16 @@ WHERE	New = 1;
 -- PlayerColors
 -----------------------------------------------
 
+DELETE FROM PlayerColors
+WHERE Type IN (SELECT CivilizationType FROM CSE_Master);
+
 INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
 SELECT	CivilizationType,
 		'Minor',
 		'COLOR_PLAYER_CITY_STATE_PRIMARY',
-		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY',
-		'COLOR_PLAYER_CITY_STATE_'||CityStateType||'_SECONDARY'
-FROM	CSE_Master
-WHERE	New = 1;
+		ColorRef,
+		ColorRef
+FROM	CSE_Master;
 
 -----------------------------------------------
 -- StartBias
@@ -147,31 +149,27 @@ SELECT	CivilizationType,
 		'TERRAIN_'||Object,
 		Tier
 FROM	CSE_StartBias
-WHERE	New = 1
-AND		ObjectType = 'TERRAIN';
+WHERE	Type = 'TERRAIN';
 
 INSERT INTO StartBiasFeatures (CivilizationType, FeatureType, Tier)
 SELECT	CivilizationType,
 		'FEATURE_'||Object,
 		Tier
 FROM	CSE_StartBias
-WHERE	New = 1
-AND		ObjectType = 'FEATURE';
+WHERE	Type = 'FEATURE';
 
 INSERT INTO StartBiasResources (CivilizationType, ResourceType, Tier)
 SELECT	CivilizationType,
 		'RESOURCE_'||Object,
 		Tier
 FROM	CSE_StartBias
-WHERE	New = 1
-AND		ObjectType = 'RESOURCE';
+WHERE	Type = 'RESOURCE';
 
 INSERT INTO StartBiasRivers (CivilizationType, Tier)
 SELECT	CivilizationType,
 		Tier
 FROM	CSE_StartBias
-WHERE	New = 1
-AND		ObjectType = 'RIVER';
+WHERE	Type = 'RIVER';
 
 -----------------------------------------------
 -- CityNames
@@ -187,5 +185,4 @@ INSERT INTO CityNames (CivilizationType, CityName)
 SELECT	CivilizationType,
 		'LOC_CITY_NAME_'||FallbackCity
 FROM	CSE_Master
-WHERE	New = 1
-AND		FallbackCity IS NOT NULL;
+WHERE	FallbackCity IS NOT NULL;

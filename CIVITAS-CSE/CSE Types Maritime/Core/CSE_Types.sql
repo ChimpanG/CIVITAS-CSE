@@ -4,6 +4,14 @@
 */
 
 -----------------------------------------------
+-- CSE_ClassTypes
+-----------------------------------------------
+
+INSERT INTO CSE_ClassTypes
+		(Type,				Color,				BonusIcon,							TypeIcon						)
+VALUES	('CSE_MARITIME',	'88,220,195,255',	'ICON_ENVOY_BONUS_CSE_MARITIME',	'ICON_CITYSTATE_CSE_MARITIME'	);
+
+-----------------------------------------------
 -- TraitModifiers
 -----------------------------------------------
 
@@ -86,25 +94,9 @@ VALUES	('MODIFIER_CSE_MARITIME_CAPITAL_FOOD',			'Preview', 	'LOC_CSE_MARITIME_TR
 		('MODIFIER_CSE_MARITIME_SHIPYARD_PRODUCTION', 	'Preview', 	'LOC_CSE_MARITIME_TRAIT_LARGE_INFLUENCE_BONUS'		);
 
 -----------------------------------------------
--- Colors
------------------------------------------------
-
-INSERT INTO Colors 
-		(Type,												Color				)
-VALUES	('COLOR_PLAYER_CITY_STATE_CSE_MARITIME_SECONDARY',	'88,220,195,255'	);
-
------------------------------------------------
 -- CivilopediaPageGroups
 -----------------------------------------------
 
 INSERT INTO CivilopediaPageGroups 
 		(SectionID, 	PageGroupId,		Name, 													VisibleIfEmpty, SortIndex	)
 VALUES	('CITYSTATES',	'CSE_MARITIME',		'LOC_PEDIA_CITYSTATES_PAGEGROUP_CSE_MARITIME_NAME',		0,				10			);
-
------------------------------------------------
--- C15_MinorCivilization_CityStateClassTypes
------------------------------------------------
-
-INSERT INTO C15_MinorCivilization_CityStateClassTypes
-		(Type,				TypeName,								LeaderType,							SmallBonus,													MedBonus,													LargeBonus,													BonusIcon,							TypeIcon						)
-VALUES	('CSE_MARITIME',	'LOC_CITY_STATES_TYPE_CSE_MARITIME',	'LEADER_MINOR_CIV_CSE_MARITIME',	'LOC_MINOR_CIV_CSE_MARITIME_TRAIT_SMALL_INFLUENCE_BONUS',	'LOC_MINOR_CIV_CSE_MARITIME_TRAIT_MEDIUM_INFLUENCE_BONUS',	'LOC_MINOR_CIV_CSE_MARITIME_TRAIT_LARGE_INFLUENCE_BONUS',	'ICON_ENVOY_BONUS_CSE_MARITIME',	'ICON_CITYSTATE_CSE_MARITIME'	);

@@ -100,7 +100,8 @@ VALUES
 -- Context: City-State borders will only expand when they receive envoys.
 -- Allowing them to expand through Culture or Gold like major civs will help them grow faster.
 
--- Game Default: ANNEX_ENVOY only
+-- Game Default: ANNEX_ENVOY
+-- NOTE: You can enable all or none (meaning zero border growth) of these if you like.
 -----------------------------------------------
 
 	('ANNEX_ENVOY',		1	),
@@ -141,4 +142,76 @@ VALUES
 -- Game Default: 1.0
 -----------------------------------------------
 	
-	('ENVOY_COMBAT',	1.0	);
+	('ENVOY_COMBAT',	1.0	),
+
+-----------------------------------------------		
+-- SECTION O: Additional Units a City-State starts with?
+
+-- Note: These units will be in addition to whatever they usually start with by default.
+-----------------------------------------------
+	
+	-- Melee
+	('CS_START_WARRIOR',	0	), -- Number of additional Warrior units
+	('CS_START_SWORDSMAN',	0	), -- Number of additional Swordsman units
+
+	-- Anti-Cavalry
+	('CS_START_SPEARMAN',	0	), -- Number of additional Spearman units
+
+	-- Ranged
+	('CS_START_SLINGER',	0	), -- Number of additional Slinger units
+	('CS_START_ARCHER',		0	), -- Number of additional Archer units
+	
+	-- Civilian
+	('CS_START_BUILDER',	0	), -- Number of additional Builder units
+
+-----------------------------------------------		
+-- SECTION P: Should City-States build Units in half the time when they're at war?
+
+-- Game Default: 0
+-- Requires Rise and Fall
+-----------------------------------------------
+	
+	('WAR_UNIT_PRODUCTION',		0	),
+
+-----------------------------------------------		
+-- SECTION Q: Should City-States upgrade their units for free?
+-- Context: This will encourage them to stay stronger throughout the game.
+
+-- Game Default: 1
+-----------------------------------------------
+	
+	('FREE_UNIT_UPGRADE',		1	),
+
+-----------------------------------------------		
+-- SECTION R: How many Envoys should you receive from liberating a City-State?
+
+-- NOTE: Requires Rise & Fall
+-----------------------------------------------
+
+	('ENVOY_LIBERATE_ANCIENT',		3	), -- Game Default: 3
+	('ENVOY_LIBERATE_CLASSICAL',	3	), -- Game Default: 3
+	('ENVOY_LIBERATE_MEDIEVAL',		3	), -- Game Default: 3
+	('ENVOY_LIBERATE_RENAISSANCE',	6	), -- Game Default: 6
+	('ENVOY_LIBERATE_INDUSTRIAL',	6	), -- Game Default: 6
+	('ENVOY_LIBERATE_MODERN',		9	), -- Game Default: 6
+	('ENVOY_LIBERATE_ATOMIC',		9	), -- Game Default: 6
+	('ENVOY_LIBERATE_INFORMATION',	9	), -- Game Default: 6
+
+-----------------------------------------------		
+-- SECTION S: Default Loyalty per turn for City-States?
+-- Context: City-States are near impossible to flip because they get 20 Loyalty per turn.
+
+-- Game Default: 20 (Loyalty per Turn)
+-- Requires Rise and Fall
+-----------------------------------------------
+
+	('DEFAULT_LOYALTY',		20	),
+
+-----------------------------------------------		
+-- SECTION T: Amount of Era Score for City-States?
+
+-- Requires Rise and Fall
+-----------------------------------------------
+
+	('MOMENT_FIRST_SUZERAIN',				2	), -- Game Default: 2
+	('MOMENT_OUSTED_SUZERAIN_DURING_WAR',	2	); -- Game Default: 2

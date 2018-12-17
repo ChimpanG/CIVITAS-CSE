@@ -4,6 +4,18 @@
 */
 
 -----------------------------------------------
+-- CSE_ClassTypes
+-----------------------------------------------
+
+UPDATE	CSE_ClassTypes
+SET		TypeName = 'LOC_CITY_STATES_TYPE_'||Type,
+		LeaderType = 'LEADER_MINOR_CIV_'||Type,
+		SmallBonus = 'LOC_CSE_'||Type||'_TRAIT_SMALL_INFLUENCE_BONUS',
+		MediumBonus = 'LOC_CSE_'||Type||'_TRAIT_MEDIUM_INFLUENCE_BONUS',
+		LargeBonus = 'LOC_CSE_'||Type||'_TRAIT_LARGE_INFLUENCE_BONUS',
+		ColorRef = 'COLOR_PLAYER_CITY_STATE_'||Type||'_SECONDARY';
+
+-----------------------------------------------
 -- CSE_Validation
 
 -- This will determine what is active for the player
@@ -56,7 +68,7 @@ OR		Removed IN (SELECT * FROM CSE_Validation);
 UPDATE	CSE_Master
 SET		CityStateType =
 		CASE
-			WHEN ProposedType IN (SELECT Type FROM C15_MinorCivilization_CityStateClassTypes)
+			WHEN ProposedType IN (SELECT Type FROM CSE_ClassTypes)
 			THEN ProposedType
 			ELSE FallbackType
 		END;
@@ -65,7 +77,8 @@ SET		CityStateType =
 UPDATE	CSE_Master
 SET		CivilizationType = 'CIVILIZATION_'||CityState,
 		LeaderType = 'LEADER_MINOR_CIV_'||CityState,
-		CityStateLeaderType = 'LEADER_MINOR_CIV_'||CityStateType;
+		CityStateLeaderType = 'LEADER_MINOR_CIV_'||CityStateType,
+		ColorRef = (SELECT ColorRef FROM CSE_ClassTypes WHERE Type = CSE_Master.CityStateType);
 
 -----------------------------------------------
 -- CSE_StartBias

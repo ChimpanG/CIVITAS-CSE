@@ -78,8 +78,8 @@ local m_isLocalPlayerTurn		:boolean = true;
 
 -- C15 --
 local tCityStateTypes = {}
-for row in GameInfo.C15_MinorCivilization_CityStateClassTypes() do
-	tCityStateTypes[row.Type] = {TypeName = Locale.Lookup(row.TypeName), LeaderType = row.LeaderType, SmallBonus = Locale.Lookup(row.SmallBonus), MedBonus = Locale.Lookup(row.MedBonus), LargeBonus = Locale.Lookup(row.LargeBonus), BonusIcon = row.BonusIcon, TypeIcon = row.TypeIcon}
+for row in GameInfo.CSE_ClassTypes() do
+	tCityStateTypes[row.Type] = {TypeName = Locale.Lookup(row.TypeName), LeaderType = row.LeaderType, SmallBonus = Locale.Lookup(row.SmallBonus), MediumBonus = Locale.Lookup(row.MediumBonus), LargeBonus = Locale.Lookup(row.LargeBonus), BonusIcon = row.BonusIcon, TypeIcon = row.TypeIcon}
 end
 -- /C15 --
 
@@ -166,7 +166,7 @@ function GetBonusText( playerID:number, envoyTokenNum:number )
 		if envoyTokenNum == NUM_ENVOY_TOKENS_FOR_FIRST_BONUS then 
 			bonusDetailsText = tCSType.SmallBonus
 		elseif envoyTokenNum == NUM_ENVOY_TOKENS_FOR_SECOND_BONUS then 
-			bonusDetailsText = tCSType.MedBonus
+			bonusDetailsText = tCSType.MediumBonus
 		elseif envoyTokenNum == NUM_ENVOY_TOKENS_FOR_THIRD_BONUS then 
 			bonusDetailsText = tCSType.LargeBonus
 		else 

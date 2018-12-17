@@ -17,7 +17,7 @@
     <SupportsHotSeat>true</SupportsHotSeat>
     <AssemblyName>CIVITAS CityStates Expanded</AssemblyName>
     <RootNamespace>CIVITAS CityStates Expanded</RootNamespace>
-    <InGameActionData><![CDATA[<InGameActions><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="CSE_Framework"><Properties><LoadOrder>-1</LoadOrder></Properties><File>Core/Framework/CSE_Schema.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Master"><Properties><LoadOrder>0</LoadOrder></Properties><File>Core/Framework/CSE_Master.sql</File><File>Core/CSE_UserSettings.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Validation"><Properties><LoadOrder>35</LoadOrder></Properties><File>Core/CSE_Validation.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Types"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Types.sql</File></UpdateDatabase><UpdateDatabase id="CSE_CityStates"><Properties><LoadOrder>60</LoadOrder></Properties></UpdateDatabase><UpdateText id="CSE_Text"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Localisation.sql</File></UpdateText><UpdateIcons id="CSE_Icons"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Icons.sql</File></UpdateIcons><UpdateDatabase id="CSE_Globals"><Properties><LoadOrder>70</LoadOrder></Properties></UpdateDatabase></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="CSE_Framework"><Properties><LoadOrder>-1</LoadOrder></Properties><File>Core/Framework/CSE_Schema.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Master"><Properties><LoadOrder>0</LoadOrder></Properties><File>Core/Framework/CSE_Master.sql</File><File>Core/CSE_UserSettings.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Validation"><Properties><LoadOrder>35</LoadOrder></Properties><File>Core/CSE_Validation.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Types"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Types.sql</File></UpdateDatabase><UpdateDatabase id="CSE_CityStates"><Properties><LoadOrder>60</LoadOrder></Properties><File>Core/CSE_CityStates.sql</File></UpdateDatabase><UpdateText id="CSE_Text"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Localisation.sql</File></UpdateText><UpdateIcons id="CSE_Icons"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Icons.sql</File></UpdateIcons><UpdateDatabase id="CSE_Globals"><Properties><LoadOrder>70</LoadOrder></Properties><File>Core/CSE_Globals.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Globals_XP1"><Properties><LoadOrder>70</LoadOrder></Properties><Criteria>XP1</Criteria><File>Core/XP1/CSE_Globals_XP1.sql</File></UpdateDatabase></InGameActions>]]></InGameActionData>
     <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="XP1"><GameCoreInUse>Expansion1</GameCoreInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
@@ -30,6 +30,7 @@
     <Folder Include="Core" />
     <Folder Include="Core\Framework" />
     <Folder Include="Core\Mod Support" />
+    <Folder Include="Core\XP1" />
     <Folder Include="Core\Utilities" />
     <Folder Include="Core\Utilities\UI Replacements" />
     <Folder Include="Core\C_CityStates" />
@@ -100,6 +101,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\C_CityStates\CVS_CityStates_Updates.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\XP1\CSE_Globals_XP1.sql">
       <SubType>Content</SubType>
     </Content>
     <Content Include="XLPs\Icons.xlp">

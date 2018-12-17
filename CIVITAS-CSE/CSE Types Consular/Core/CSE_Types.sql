@@ -4,6 +4,14 @@
 */
 
 -----------------------------------------------
+-- CSE_ClassTypes
+-----------------------------------------------
+
+INSERT INTO CSE_ClassTypes
+		(Type,				Color,				BonusIcon,							TypeIcon						)
+VALUES	('CSE_CONSULAR',	'144,128,255,255',	'ICON_ENVOY_BONUS_CSE_CONSULAR',	'ICON_CITYSTATE_CSE_CONSULAR'	);
+
+-----------------------------------------------
 -- Types
 -----------------------------------------------
 
@@ -107,25 +115,9 @@ VALUES	('REQ_CSE_CITY_HAS_GOVERNOR',	'Amount',		1		),
 		('REQ_CSE_CITY_HAS_GOVERNOR',	'Established',	1		);
 
 -----------------------------------------------
--- Colors
------------------------------------------------
-
-INSERT INTO Colors 
-		(Type,												Color				)
-VALUES	('COLOR_PLAYER_CITY_STATE_CSE_CONSULAR_SECONDARY',	'144,128,255,255'	);
-
------------------------------------------------
 -- CivilopediaPageGroups
 -----------------------------------------------
 
 INSERT INTO CivilopediaPageGroups 
 		(SectionID, 	PageGroupId,		Name, 													VisibleIfEmpty, SortIndex	)
 VALUES	('CITYSTATES',	'CSE_CONSULAR',		'LOC_PEDIA_CITYSTATES_PAGEGROUP_CSE_CONSULAR_NAME',		0,				10			);
-
------------------------------------------------
--- C15_MinorCivilization_CityStateClassTypes
------------------------------------------------
-
-INSERT INTO C15_MinorCivilization_CityStateClassTypes
-		(Type,				TypeName,								LeaderType,							SmallBonus,										MedBonus,											LargeBonus,										BonusIcon,							TypeIcon						)
-VALUES	('CSE_CONSULAR',	'LOC_CITY_STATES_TYPE_CSE_CONSULAR',	'LEADER_MINOR_CIV_CSE_CONSULAR',	'LOC_CSE_CONSULAR_TRAIT_SMALL_INFLUENCE_BONUS',	'LOC_CSE_CONSULAR_TRAIT_MEDIUM_INFLUENCE_BONUS',	'LOC_CSE_CONSULAR_TRAIT_LARGE_INFLUENCE_BONUS',	'ICON_ENVOY_BONUS_CSE_CONSULAR',	'ICON_CITYSTATE_CSE_CONSULAR'	);
