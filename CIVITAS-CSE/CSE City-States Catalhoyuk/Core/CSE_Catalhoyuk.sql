@@ -6,51 +6,20 @@
 */
 
 -----------------------------------------------
--- ModCheck
------------------------------------------------
-
-INSERT INTO ModCheck (ModType) VALUES ('CSE_CATALHOYUK');
-
------------------------------------------------
--- CSE_Master
-
--- NOTES:
--- FallbackType is used when the CityStateType is unavailable
--- FallbackCity is used in cases where a modded civilization or leader uses the same city as their Capital.
------------------------------------------------
-
-INSERT INTO CSE_Master
-		(CityState,			ProposedType,		FallbackType,	FallbackCity,	Ethnicity			)
-VALUES	('CSE_CATALHOYUK',	'AGRICULTURAL',		'TRADE',		'KONYA',		'ETHNICITY_MEDIT'	);
-
------------------------------------------------
--- CSE_StartBias
-
--- NOTES:
--- ObjectType can be TERRAIN, FEATURE, RESOURCE or RIVER
--- Object is the latter part of the object, except RIVER which should be NULL
------------------------------------------------
-
-INSERT INTO CSE_StartBias
-		(CityState,			Type,			Object,			Tier	)
-VALUES	('CSE_CATALHOYUK',	'TERRAIN',		'PLAINS',		5		),
-		('CSE_CATALHOYUK',	'TERRAIN',		'PLAINS_HILLS',	5		);
-
------------------------------------------------
 -- TraitModifiers
 -----------------------------------------------
 
 INSERT INTO TraitModifiers
-		(TraitType,					ModifierId										)
-VALUES	('TRAIT_CSE_CATALHOYUK',	'CSE_CATALHOYUK_SUZERAIN_LEATHER_LUXURY_ATTACH'	),
-		('TRAIT_CSE_CATALHOYUK',	'CSE_CATALHOYUK_SUZERAIN_WOOL_LUXURY_ATTACH'	);
+		(TraitType,							ModifierId										)
+VALUES	('MINOR_CIV_CSE_CATALHOYUK_TRAIT',	'CSE_CATALHOYUK_SUZERAIN_LEATHER_LUXURY_ATTACH'	),
+		('MINOR_CIV_CSE_CATALHOYUK_TRAIT',	'CSE_CATALHOYUK_SUZERAIN_WOOL_LUXURY_ATTACH'	);
 
 INSERT INTO TraitModifiers (TraitType, ModifierId)
-SELECT 'TRAIT_CSE_CATALHOYUK', 'CSE_CATALHOYUK_LEATHER_LUXURY'
+SELECT 'MINOR_CIV_CSE_CATALHOYUK_TRAIT', 'CSE_CATALHOYUK_LEATHER_LUXURY'
 WHERE EXISTS (SELECT * FROM CSE_UserSettings WHERE Setting = 'RECEIVE_OWN_BONUS' AND Value = 1);
 
 INSERT INTO TraitModifiers (TraitType, ModifierId)
-SELECT 'TRAIT_CSE_CATALHOYUK', 'CSE_CATALHOYUK_WOOL_LUXURY'
+SELECT 'MINOR_CIV_CSE_CATALHOYUK_TRAIT', 'CSE_CATALHOYUK_WOOL_LUXURY'
 WHERE EXISTS (SELECT * FROM CSE_UserSettings WHERE Setting = 'RECEIVE_OWN_BONUS' AND Value = 1);
 
 -----------------------------------------------

@@ -215,3 +215,56 @@ VALUES
 
 	('MOMENT_FIRST_SUZERAIN',				2	), -- Game Default: 2
 	('MOMENT_OUSTED_SUZERAIN_DURING_WAR',	2	); -- Game Default: 2
+
+-----------------------------------------------		
+-- SECTION Z: Disable City-States
+-- Change 0 to 1 to disable a City-State.
+
+-- Disclaimer: Disabling a City-State here may cause conflicts with other mods that might reference it.
+-- Note: Enabling a City-State you do not own the DLC/XP for will not enable them in-game.
+-----------------------------------------------
+
+INSERT INTO CSE_UserSettings (Setting, Section, Value)
+VALUES
+
+	('AKKAD',			'DISABLED',	1	),
+	('AMSTERDAM',		'DISABLED', 1	),
+	('ANTANANARIVO',	'DISABLED', 1	),
+	('ANTIOCH',			'DISABLED', 1	),
+	('ARMAGH',			'DISABLED', 1	),
+	('AUCKLAND',		'DISABLED', 1	),
+	('BABYLON',			'DISABLED', 0	),
+	('BOLOGNA',			'DISABLED', 1	),
+	('BUENOS_AIRES',	'DISABLED', 0	),
+	('BRUSSELS',		'DISABLED', 0	),
+	('CAHOKIA',			'DISABLED', 1	),
+	('CARDIFF',			'DISABLED', 1	),
+	('CARTHAGE',		'DISABLED', 1	),
+	('FEZ',				'DISABLED', 1	),
+	('GENEVA',			'DISABLED', 1	),
+	('GRANADA',			'DISABLED', 1	),
+	('HATTUSA',			'DISABLED', 1	),
+	('HONG_KONG',		'DISABLED', 1	),
+	('JAKARTA',			'DISABLED', 1	),
+	('JERUSALEM',		'DISABLED', 1	),
+	('KABUL',			'DISABLED', 1	),
+	('KANDY',			'DISABLED', 1	),
+	('KUMASI',			'DISABLED', 1	),
+	('LA_VENTA',		'DISABLED', 1	),
+	('LISBON',			'DISABLED', 1	),
+	('MEXICO_CITY',		'DISABLED', 1	),
+	('MOHENJO_DARO',	'DISABLED', 1	),
+	('MUSCAT',			'DISABLED', 1	),
+	('NAN_MADOL',		'DISABLED', 1	),
+	('NAZCA',			'DISABLED', 1	),
+	('NGAZARGAMU',		'DISABLED', 1	),
+	('PALENQUE',		'DISABLED', 1	),
+	('PRESLAV',			'DISABLED', 1	),
+	('RAPA_NUI',		'DISABLED', 1	),
+	('SEOUL',			'DISABLED', 1	),
+	('STOCKHOLM',		'DISABLED', 1	),
+	('TORONTO',			'DISABLED', 1	),
+	('VALLETTA',		'DISABLED', 1	),
+	('VILNIUS',			'DISABLED', 1	),
+	('YEREVAN',			'DISABLED', 1	),
+	('ZANZIBAR',		'DISABLED', 1	);

@@ -4,11 +4,11 @@
 */
 
 -----------------------------------------------
--- Leaders
+-- CSE_Master
 -----------------------------------------------
 
 UPDATE	CSE_Master
-SET		CityStateType = 'CSE_AGRICULTURAL'
+SET		ProposedType = 'CSE_AGRICULTURAL'
 WHERE	CityState
 IN		(
 		'BUENOS_AIRES',

@@ -365,3 +365,26 @@ SELECT	'MODIFIER_CSE_DEFAULT_WAR_UNIT_UPGRADE',
 		'Amount',
 		100
 WHERE EXISTS (SELECT * FROM CSE_UserSettings WHERE Setting = 'FREE_UNIT_UPGRADE' AND Value = 1);
+
+-----------------------------------------------
+-- SECTION Z: Disable City-States
+-----------------------------------------------
+
+DELETE FROM Types
+WHERE	Type IN (SELECT CivilizationType FROM CSE_Master WHERE CityState IN (SELECT Setting FROM CSE_UserSettings WHERE Section = 'DISABLED' AND Value = 1))
+OR		Type IN (SELECT LeaderType FROM CSE_Master WHERE CityState IN (SELECT Setting FROM CSE_UserSettings WHERE Section = 'DISABLED' AND Value = 1));
+
+DELETE FROM TypeProperties
+WHERE	Type IN (SELECT CivilizationType FROM CSE_Master WHERE CityState IN (SELECT Setting FROM CSE_UserSettings WHERE Section = 'DISABLED' AND Value = 1));
+
+DELETE FROM Civilizations
+WHERE	CivilizationType IN (SELECT CivilizationType FROM CSE_Master WHERE CityState IN (SELECT Setting FROM CSE_UserSettings WHERE Section = 'DISABLED' AND Value = 1));
+
+DELETE FROM CivilizationLeaders
+WHERE	CivilizationType IN (SELECT CivilizationType FROM CSE_Master WHERE CityState IN (SELECT Setting FROM CSE_UserSettings WHERE Section = 'DISABLED' AND Value = 1));
+
+DELETE FROM Leaders
+WHERE	LeaderType IN (SELECT LeaderType FROM CSE_Master WHERE CityState IN (SELECT Setting FROM CSE_UserSettings WHERE Section = 'DISABLED' AND Value = 1));
+
+DELETE FROM LeaderTraits
+WHERE	LeaderType IN (SELECT LeaderType FROM CSE_Master WHERE CityState IN (SELECT Setting FROM CSE_UserSettings WHERE Section = 'DISABLED' AND Value = 1));

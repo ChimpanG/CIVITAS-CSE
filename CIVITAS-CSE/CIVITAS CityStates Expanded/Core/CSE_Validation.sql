@@ -13,7 +13,17 @@ SET		TypeName = 'LOC_CITY_STATES_TYPE_'||Type,
 		SmallBonus = 'LOC_CSE_'||Type||'_TRAIT_SMALL_INFLUENCE_BONUS',
 		MediumBonus = 'LOC_CSE_'||Type||'_TRAIT_MEDIUM_INFLUENCE_BONUS',
 		LargeBonus = 'LOC_CSE_'||Type||'_TRAIT_LARGE_INFLUENCE_BONUS',
-		ColorRef = 'COLOR_PLAYER_CITY_STATE_'||Type||'_SECONDARY';
+		ColorRef = 'COLOR_PLAYER_CITY_STATE_'||Type||'_SECONDARY'
+WHERE	New = 0;
+
+UPDATE	CSE_ClassTypes
+SET		TypeName = 'LOC_CITY_STATES_TYPE_'||Type,
+		LeaderType = 'LEADER_MINOR_CIV_'||Type,
+		SmallBonus = 'LOC_'||Type||'_TRAIT_SMALL_INFLUENCE_BONUS',
+		MediumBonus = 'LOC_'||Type||'_TRAIT_MEDIUM_INFLUENCE_BONUS',
+		LargeBonus = 'LOC_'||Type||'_TRAIT_LARGE_INFLUENCE_BONUS',
+		ColorRef = 'COLOR_PLAYER_CITY_STATE_'||Type||'_SECONDARY'
+WHERE	New = 1;
 
 -----------------------------------------------
 -- CSE_Validation

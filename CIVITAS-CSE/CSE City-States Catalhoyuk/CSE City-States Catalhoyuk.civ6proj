@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
-    <Name>City-States Expanded [ICON_GreatPerson] Catalhoyuk</Name>
+    <Name>CSE [ICON_GreatPerson] Catalhoyuk</Name>
     <Guid>545023d5-8f17-4bc2-900c-62559a0f4a08</Guid>
     <ProjectGuid>d6fb9fb7-d0ea-4578-b5dd-2f95e963aa23</ProjectGuid>
     <ModVersion>1</ModVersion>
@@ -17,7 +17,7 @@
     <SupportsHotSeat>true</SupportsHotSeat>
     <AssemblyName>CSE City-States Catalhoyuk</AssemblyName>
     <RootNamespace>CSE City-States Catalhoyuk</RootNamespace>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Catalhoyuk_DB"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Catalhoyuk.sql</File></UpdateDatabase><UpdateText id="CSE_Catalhoyuk_Text"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Catalhoyuk_Localisation.sql</File></UpdateText><UpdateIcons id="CSE_Catalhoyuk_Icons"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Catalhoyuk_Icons.sql</File></UpdateIcons><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Catalhoyuk_DB"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Catalhoyuk.sql</File></UpdateDatabase><UpdateText id="CSE_Catalhoyuk_Text"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Catalhoyuk_Localisation.sql</File></UpdateText><UpdateIcons id="CSE_Catalhoyuk_Icons"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Catalhoyuk_Icons.sql</File></UpdateIcons><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="CSE_Catalhoyuk_Master"><Properties><LoadOrder>15</LoadOrder></Properties><File>Core/CSE_Catalhoyuk_Master.sql</File></UpdateDatabase></InGameActions>]]></InGameActionData>
     <AssociationData><![CDATA[<Associations>
   <Dependency type="Mod" title="CIVITAS [ICON_Envoy] City-States Expanded" id="7d0b57ba-6a5c-4de0-ac10-e1e464ac82f6" />
 </Associations>]]></AssociationData>
@@ -40,6 +40,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\CSE_Catalhoyuk_Localisation.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Catalhoyuk_Master.sql">
       <SubType>Content</SubType>
     </Content>
     <Content Include="XLPs\Icons.xlp">
