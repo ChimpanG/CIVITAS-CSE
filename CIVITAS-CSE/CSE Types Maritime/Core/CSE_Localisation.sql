@@ -7,7 +7,7 @@ INSERT OR REPLACE INTO LocalizedText (Language, Tag, Text)
 VALUES
 
 -----------------------------------------------
--- Maritime
+-- Consular
 -----------------------------------------------
 
 	("en_US",	"LOC_CITY_STATES_TYPE_CSE_MARITIME",					"Maritime"	),

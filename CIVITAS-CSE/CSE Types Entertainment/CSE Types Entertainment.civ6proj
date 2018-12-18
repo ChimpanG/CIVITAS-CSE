@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
-    <Name>City-States Expanded [ICON_Government] Entertainment Type</Name>
+    <Name>CSE [ICON_ENVOY] Type Entertainment</Name>
     <Guid>58b25c1d-159a-401d-adde-0e3da7af932d</Guid>
     <ProjectGuid>fb6951a3-6c0a-42b9-bbd3-8987b5ccb9ad</ProjectGuid>
     <ModVersion>1</ModVersion>
@@ -20,7 +20,7 @@
     <AssociationData><![CDATA[<Associations>
   <Dependency type="Mod" title="CIVITAS [ICON_Envoy] City-States Expanded" id="7d0b57ba-6a5c-4de0-ac10-e1e464ac82f6" />
 </Associations>]]></AssociationData>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Types_DB"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Types.sql</File></UpdateDatabase><UpdateText id="CSE_Text"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Localisation.sql</File></UpdateText><UpdateIcons id="CSE_Icons"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Icons.sql</File></UpdateIcons><UpdateDatabase id="CSE_CityStates_DB"><Properties><LoadOrder>51</LoadOrder></Properties><File>Core/CSE_CityStates.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Framework_DB"><Properties><LoadOrder>1</LoadOrder></Properties><File>Core/Framework/CSE_Schema.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Types_XP1_DB"><Properties><LoadOrder>51</LoadOrder></Properties><Criteria>XP1</Criteria><File>Core/XP1/CSE_Types_XP1.sql</File></UpdateDatabase><UpdateText id="CSE_XP1_Text"><Properties><LoadOrder>51</LoadOrder></Properties><Criteria>XP1</Criteria><File>Core/XP1/CSE_Localisation_XP1.sql</File></UpdateText><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Types_Entertainment"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Types.sql</File></UpdateDatabase><UpdateText id="CSE_Entertainment_Text"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Localisation.sql</File></UpdateText><UpdateIcons id="CSE_Entertainment_Icons"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Icons.sql</File></UpdateIcons><UpdateDatabase id="CSE_CityStates_Entertainment"><Properties><LoadOrder>51</LoadOrder></Properties><File>Core/CSE_CityStates.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Framework_Entertainment"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/CSE_Master.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Types_XP1_Entertainment"><Properties><LoadOrder>51</LoadOrder></Properties><Criteria>XP1</Criteria><File>Core/XP1/CSE_Types_XP1.sql</File></UpdateDatabase><UpdateText id="CSE_XP1_Entertainment"><Properties><LoadOrder>51</LoadOrder></Properties><Criteria>XP1</Criteria><File>Core/XP1/CSE_Localisation_XP1.sql</File></UpdateText><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt></InGameActions>]]></InGameActionData>
     <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="XP1"><GameCoreInUse>Expansion1</GameCoreInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
@@ -31,7 +31,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\" />
-    <Folder Include="Core\Framework\" />
     <Folder Include="Core\XP1\" />
     <Folder Include="XLPs\" />
   </ItemGroup>
@@ -45,16 +44,16 @@
     <Content Include="Core\CSE_Localisation.sql">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Core\CSE_Master.sql">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Core\CSE_Types.sql">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Core\Framework\CSE_Master.sql">
+    <Content Include="Core\XP1\CSE_Localisation_XP1.sql">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\XP1\CSE_Types_XP1.sql">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Core\XP1\CSE_Localisation_XP1.sql">
       <SubType>Content</SubType>
     </Content>
     <Content Include="XLPs\Icons.xlp">

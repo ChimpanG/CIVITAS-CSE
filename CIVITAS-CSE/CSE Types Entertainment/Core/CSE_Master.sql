@@ -7,7 +7,7 @@
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModCheck (ModType) VALUES ('CSE_AGRICULTURAL');
+INSERT INTO ModCheck (ModType) VALUES ('CSE_ENTERTAINMENT');
 
 -----------------------------------------------
 -- CSE_ClassTypes
@@ -15,4 +15,4 @@ INSERT INTO ModCheck (ModType) VALUES ('CSE_AGRICULTURAL');
 
 INSERT INTO CSE_ClassTypes
 		(Type,					Color,				BonusIcon,								TypeIcon							)
-VALUES	('CSE_AGRICULTURAL',	'193,231,115,255',	'ICON_ENVOY_BONUS_CSE_AGRICULTURAL',	'ICON_CITYSTATE_CSE_AGRICULTURAL'	);
+VALUES	('CSE_ENTERTAINMENT',	'255,100,170,255',	'ICON_ENVOY_BONUS_CSE_ENTERTAINMENT',	'ICON_CITYSTATE_CSE_ENTERTAINMENT'	);
