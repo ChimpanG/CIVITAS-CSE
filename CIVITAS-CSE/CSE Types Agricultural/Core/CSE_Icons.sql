@@ -27,7 +27,7 @@ VALUES  ('ICON_ATLAS_CSE_AGRICULTURAL',			22,	 		1,				1,				'CSE_AGRICULTURAL_2
 -- IconDefinitions
 -----------------------------------------------
 
-INSERT OR REPLACE INTO IconDefinitions	
+INSERT INTO IconDefinitions	
 		(Name,									Atlas, 									'Index'	)
 VALUES	('ICON_CITYSTATE_CSE_AGRICULTURAL',		'ICON_ATLAS_CSE_AGRICULTURAL',			0		),
 		('ICON_ENVOY_BONUS_CSE_AGRICULTURAL',	'ICON_ATLAS_CSE_AGRICULTURAL_ENVOY',	0		);

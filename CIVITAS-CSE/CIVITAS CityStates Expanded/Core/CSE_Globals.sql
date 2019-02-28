@@ -367,6 +367,35 @@ SELECT	'MODIFIER_CSE_DEFAULT_WAR_UNIT_UPGRADE',
 WHERE EXISTS (SELECT * FROM CSE_UserSettings WHERE Setting = 'FREE_UNIT_UPGRADE' AND Value = 1);
 
 -----------------------------------------------
+-- SECTION U: Should declaring a Protectorate War be an independent action (not formal war) that does not require denouncement?
+-----------------------------------------------
+
+UPDATE	DiplomaticActions
+SET		UIGroup = NULL,
+		DenouncementTurnsRequired = -1
+WHERE	DiplomaticActionType = 'DIPLOACTION_DECLARE_PROTECTORATE_WAR'
+AND		EXISTS (SELECT * FROM CSE_UserSettings WHERE Setting = 'INDEPENDENT_PROTECTORATE_WAR' AND Value = 1);
+
+-----------------------------------------------
+-- SECTION V: Should Protectorate War be available to declare from the start of the game?
+-----------------------------------------------
+
+UPDATE	DiplomaticActions
+SET		InitiatorPrereqCivic = NULL
+WHERE	DiplomaticActionType = 'DIPLOACTION_DECLARE_PROTECTORATE_WAR'
+AND		EXISTS (SELECT * FROM CSE_UserSettings WHERE Setting = 'DECLARE_PROTECTORATE_WAR' AND Value = 1);
+
+-----------------------------------------------
+-- SECTION W: Should declaring war on a City-State receive warmonger penalties?
+-----------------------------------------------
+
+UPDATE	DiplomaticActions
+SET		WarmongerPercent = 50,
+		CaptureWarmongerPercent = 100
+WHERE	DiplomaticActionType = 'DIPLOACTION_DECLARE_WAR_MINOR_CIV'
+AND		EXISTS (SELECT * FROM CSE_UserSettings WHERE Setting = 'CITY_STATE_WARMONGER' AND Value = 1);
+
+-----------------------------------------------
 -- SECTION Z: Disable City-States
 -----------------------------------------------
 

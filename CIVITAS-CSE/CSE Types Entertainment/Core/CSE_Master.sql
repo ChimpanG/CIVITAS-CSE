@@ -7,7 +7,7 @@
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModCheck (ModType) VALUES ('CSE_ENTERTAINMENT');
+INSERT INTO ModValidation (Version) VALUES ('CSE_ENTERTAINMENT');
 
 -----------------------------------------------
 -- CSE_ClassTypes

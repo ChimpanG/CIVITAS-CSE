@@ -8,7 +8,7 @@
 -----------------------------------------------
 
 UPDATE	CSE_Master
-SET		CityStateType = 'CSE_ENTERTAINMENT'
+SET		ProposedType = 'CSE_ENTERTAINMENT'
 WHERE	CityState
 IN		(
 		'MEXICO_CITY'

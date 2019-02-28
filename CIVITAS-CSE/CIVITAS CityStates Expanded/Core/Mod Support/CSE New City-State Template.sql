@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS ModCheck
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModCheck (ModType) VALUES ('CSE_EXAMPLE');
+INSERT INTO ModValidation (Version) VALUES ('CSE_EXAMPLE');
 
 
 

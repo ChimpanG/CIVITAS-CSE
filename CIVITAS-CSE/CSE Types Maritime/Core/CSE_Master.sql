@@ -7,7 +7,7 @@
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModCheck (ModType) VALUES ('CSE_MARITIME');
+INSERT INTO ModValidation (Version) VALUES ('CSE_MARITIME');
 
 -----------------------------------------------
 -- CSE_ClassTypes

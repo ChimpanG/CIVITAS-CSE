@@ -2,12 +2,12 @@
 <Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
-    <Name>City-States Expanded [ICON_GreatPerson] Azcapotzalco</Name>
+    <Name>CSE [ICON_GREATPERSON] Azcapotzalco</Name>
     <Guid>c35ed8cd-a0a3-476d-a1b3-79177dfca042</Guid>
     <ProjectGuid>4f6ae24b-8d97-4681-b126-77e6635f8447</ProjectGuid>
     <ModVersion>1</ModVersion>
     <Teaser>Adds Azcapotzalco as a new City-State for CIVITAS City-States Expanded.</Teaser>
-    <Description>Adds Azcapotzalco as a new City-State for CIVITAS City-States Expanded.</Description>
+    <Description>Adds Azcapotzalco as a new City-State for CIVITAS [ICON_ENVOY] City-States Expanded</Description>
     <Authors>ChimpanG</Authors>
     <SpecialThanks>
     </SpecialThanks>
@@ -19,10 +19,9 @@
     <RootNamespace>CSE City-States Azcapotzalco</RootNamespace>
     <AssociationData><![CDATA[<Associations>
   <Dependency type="Mod" title="CIVITAS [ICON_ENVOY] City-States Expanded" id="7d0b57ba-6a5c-4de0-ac10-e1e464ac82f6" />
-  <Dependency type="Dlc" title="Expansion: Rise and Fall" id="1B28771A-C749-434B-9053-D1380C553DE9" />
 </Associations>]]></AssociationData>
     <FrontEndActionData><![CDATA[<FrontEndActions />]]></FrontEndActionData>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Azcapotzalco_DB"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Azcapotzalco.sql</File></UpdateDatabase><UpdateIcons id="CSE_Azcapotzalco_Icons"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Azcapotzalco_Icons.sql</File></UpdateIcons><UpdateText id="CSE_Azcapotzalco_Text"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Azcapotzalco_Localisation.sql</File></UpdateText><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Azcapotzalco_DB"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Azcapotzalco.sql</File></UpdateDatabase><UpdateIcons id="CSE_Azcapotzalco_Icons"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Azcapotzalco_Icons.sql</File></UpdateIcons><UpdateText id="CSE_Azcapotzalco_Text"><Properties><LoadOrder>55</LoadOrder></Properties><File>Core/CSE_Azcapotzalco_Localisation.sql</File></UpdateText><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="CSE_Azcapotzalco_Master"><Properties><LoadOrder>15</LoadOrder></Properties><File>Core/CSE_Azcapotzalco_Master.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Azcapotzalco_Colors"><Properties><LoadOrder>15</LoadOrder></Properties><File>Core/CSE_Azcapotzalco_Colors.sql</File></UpdateDatabase></InGameActions>]]></InGameActionData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
     <OutputPath>.</OutputPath>
@@ -41,6 +40,12 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\CSE_Azcapotzalco_Localisation.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Azcapotzalco_Colors.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Azcapotzalco_Master.sql">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

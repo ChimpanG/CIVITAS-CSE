@@ -13,6 +13,7 @@ SET		TypeName = 'LOC_CITY_STATES_TYPE_'||Type,
 		SmallBonus = 'LOC_CSE_'||Type||'_TRAIT_SMALL_INFLUENCE_BONUS',
 		MediumBonus = 'LOC_CSE_'||Type||'_TRAIT_MEDIUM_INFLUENCE_BONUS',
 		LargeBonus = 'LOC_CSE_'||Type||'_TRAIT_LARGE_INFLUENCE_BONUS',
+		LargestBonus = 'LOC_CSE_'||Type||'_TRAIT_LARGEST_INFLUENCE_BONUS',
 		ColorRef = 'COLOR_PLAYER_CITY_STATE_'||Type||'_SECONDARY'
 WHERE	New = 0;
 
@@ -22,20 +23,31 @@ SET		TypeName = 'LOC_CITY_STATES_TYPE_'||Type,
 		SmallBonus = 'LOC_'||Type||'_TRAIT_SMALL_INFLUENCE_BONUS',
 		MediumBonus = 'LOC_'||Type||'_TRAIT_MEDIUM_INFLUENCE_BONUS',
 		LargeBonus = 'LOC_'||Type||'_TRAIT_LARGE_INFLUENCE_BONUS',
+		LargestBonus = 'LOC_'||Type||'_TRAIT_LARGEST_INFLUENCE_BONUS',
 		ColorRef = 'COLOR_PLAYER_CITY_STATE_'||Type||'_SECONDARY'
 WHERE	New = 1;
 
 -----------------------------------------------
--- CSE_Validation
+-- ModValidation
 
 -- This will determine what is active for the player
 -----------------------------------------------
 
-INSERT INTO CSE_Validation (Version)
-VALUES	('BASE');
+INSERT INTO ModValidation
+		(Version				)
+VALUES	('BASE'					),
+		('CITY_STATES_EXPANDED'	);
 
-INSERT INTO CSE_Validation (Version)
-SELECT	'VIKINGS'
+REPLACE INTO ModValidation (Version)
+SELECT	'DLC1'
+WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
+(
+'CIVILIZATION_POLAND',
+'LEADER_JADWIGA'
+));
+
+REPLACE INTO ModValidation (Version)
+SELECT	'DLC2'
 WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
 (
 'CIVILIZATION_AUCKLAND',
@@ -51,28 +63,106 @@ WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
 'FEATURE_GIANTS_CAUSEWAY'
 ));
 
-INSERT INTO CSE_Validation (Version)
+REPLACE INTO ModValidation (Version)
+SELECT	'DLC3'
+WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
+(
+'CIVILIZATION_AUSTRALIA',
+'LEADER_JOHN_CURTIN'
+));
+
+REPLACE INTO ModValidation (Version)
+SELECT	'DLC4'
+WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
+(
+'CIVILIZATION_MACEDON',
+'CIVILIZATION_PERSIA',
+'LEADER_ALEXANDER',
+'LEADER_CYRUS'
+));
+
+REPLACE INTO ModValidation (Version)
+SELECT	'DLC5'
+WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
+(
+'CIVILIZATION_NUBIA',
+'LEADER_AMANITORE'
+));
+
+REPLACE INTO ModValidation (Version)
+SELECT	'DLC6'
+WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
+(
+'CIVILIZATION_INDONESIA',
+'CIVILIZATION_KHMER',
+'LEADER_GITARJA',
+'LEADER_JAYAVARMAN'
+));
+
+REPLACE INTO ModValidation (Version)
 SELECT	'XP1'
 WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
 (
-'CIVILIZATION_CREE'
+'CIVILIZATION_CREE',
+'CIVILIZATION_GEORGIA',
+'CIVILIZATION_KOREA',
+'CIVILIZATION_MAPUCHE',
+'CIVILIZATION_MONGOLIA',
+'CIVILIZATION_NETHERLANDS',
+'CIVILIZATION_SCOTLAND',
+'CIVILIZATION_ZULU',
+'LEADER_POUNDMAKER',
+'LEADER_TAMAR',
+'LEADER_SEONDEOK',
+'LEADER_LAUTARO',
+'LEADER_GENGHIS_KHAN',
+'LEADER_WILHEMINA',
+'LEADER_ROBERT_THE_BRUCE',
+'LEADER_SHAKA',
+'LEADER_CHANDRAGUPTA'
 ));
 
-INSERT INTO CSE_Validation (Version)
+REPLACE INTO ModValidation (Version)
 SELECT	'XP2'
 WHERE EXISTS (SELECT Type FROM Types WHERE Type IN
 (
-'CIVILIZATION_HUNGARY'
+'CIVILIZATION_CANADA',
+'CIVILIZATION_INCA',
+'CIVILIZATION_HUNGARY',
+'CIVILIZATION_MALI',
+'CIVILIZATION_MAORI',
+'CIVILIZATION_OTTOMAN',
+'CIVILIZATION_SWEDEN',
+'LEADER_LAURIER',
+'LEADER_PACHACUTI',
+'LEADER_MATTHIAS',
+'LEADER_MANSA_MUSA',
+'LEADER_KUPE',
+'LEADER_SULEIMAN',
+'LEADER_KRISTINA',
+'LEADER_ELEANOR'
 ));
 
 -----------------------------------------------
 -- CSE_Master
 -----------------------------------------------
 
+UPDATE	CSE_Master
+SET		Requires = 
+			CASE
+				WHEN Requires = 'XP1' AND NOT EXISTS (SELECT * FROM ModValidation WHERE Version = 'XP1') AND EXISTS (SELECT * FROM ModValidation WHERE Version = 'XP2')
+				THEN 'XP2'
+				ELSE 'XP1'
+			END;
+
+UPDATE	CSE_Master
+SET		Discard = 1
+WHERE	Requires NOT IN (SELECT * FROM ModValidation)
+OR		Removed IN (SELECT * FROM ModValidation);
+
 -- Remove City-States from Master depending on active DLC, XP etc
 DELETE FROM CSE_Master
-WHERE	Requires NOT IN (SELECT * FROM CSE_Validation)
-OR		Removed IN (SELECT * FROM CSE_Validation);
+WHERE	Discard = 1;
 
 -- Update City-State type based on whether their type exists in classes
 UPDATE	CSE_Master

@@ -7,7 +7,7 @@
     <ProjectGuid>d4cb122d-053a-46d1-b27e-d22ece899902</ProjectGuid>
     <ModVersion>1</ModVersion>
     <Teaser>Adds the Consular City-State type to CIVITAS City-States Expanded.</Teaser>
-    <Description>Adds the Consular City-State type to CIVITAS City-States Expanded.</Description>
+    <Description>Adds the Consular City-State type to CIVITAS [ICON_ENVOY] City-States Expanded.</Description>
     <Authors>thecrazyscotsman, ChimpanG</Authors>
     <SpecialThanks>
     </SpecialThanks>
@@ -15,13 +15,17 @@
     <SupportsSinglePlayer>true</SupportsSinglePlayer>
     <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsHotSeat>true</SupportsHotSeat>
+    <ModProperties>
+      <CompatibleVersions>2.0</CompatibleVersions>
+    </ModProperties>
     <AssemblyName>CSE Types Consular</AssemblyName>
     <RootNamespace>CSE Types Consular</RootNamespace>
     <AssociationData><![CDATA[<Associations>
   <Dependency type="Mod" title="CIVITAS [ICON_Envoy] City-States Expanded" id="7d0b57ba-6a5c-4de0-ac10-e1e464ac82f6" />
   <Dependency type="Dlc" title="Expansion: Rise and Fall" id="1B28771A-C749-434B-9053-D1380C553DE9" />
 </Associations>]]></AssociationData>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Types_DB"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Types.sql</File></UpdateDatabase><UpdateText id="CSE_Text"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Localisation.sql</File></UpdateText><UpdateIcons id="CSE_Icons"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Icons.sql</File></UpdateIcons><UpdateDatabase id="CSE_CityStates_DB"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/CSE_CityStates.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Framework_DB"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/CSE_Master.sql</File></UpdateDatabase><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="CSE_Types_Consular"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Types.sql</File></UpdateDatabase><UpdateText id="CSE_Text_Consular"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Localisation.sql</File></UpdateText><UpdateIcons id="CSE_Icons_Consular"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/CSE_Icons.sql</File></UpdateIcons><UpdateDatabase id="CSE_CityStates_Consular"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/CSE_CityStates.sql</File></UpdateDatabase><UpdateArt id="ArtDep"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="CSE_Master_Consular"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/CSE_Master.sql</File></UpdateDatabase><UpdateColors id="CSE_Colors_Consular"><Properties><LoadOrder>10</LoadOrder></Properties><File>Core/CSE_Colors.sql</File></UpdateColors></InGameActions>]]></InGameActionData>
+    <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="ANY" any="1"><RuleSetInUse>RULESET_STANDARD,RULESET_EXPANSION_1,RULESET_EXPANSION_2</RuleSetInUse></Criteria><Criteria id="XP1"><RuleSetInUse>RULESET_EXPANSION_1</RuleSetInUse></Criteria><Criteria id="XP2"><RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse></Criteria><Criteria id="XP1 AND BEYOND" any="1"><RuleSetInUse>RULESET_EXPANSION_1,RULESET_EXPANSION_2</RuleSetInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
     <OutputPath>.</OutputPath>
@@ -35,6 +39,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Core\CSE_CityStates.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\CSE_Colors.sql">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\CSE_Icons.sql">

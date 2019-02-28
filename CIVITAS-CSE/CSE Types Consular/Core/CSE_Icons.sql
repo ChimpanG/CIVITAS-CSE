@@ -28,6 +28,6 @@ VALUES  ('ICON_ATLAS_CSE_CONSULAR',			22,	 		1,				1,				'CSE_CONSULAR_22.dds'		
 -----------------------------------------------
 
 INSERT OR REPLACE INTO IconDefinitions	
-		(Name,							Atlas, 								'Index'	)
-VALUES	('ICON_CITYSTATE_CONSULAR',		'ICON_ATLAS_CSE_CONSULAR',			0		),
-		('ICON_ENVOY_BONUS_CONSULAR',	'ICON_ATLAS_CSE_CONSULAR_ENVOY',	0		);
+		(Name,								Atlas, 								'Index'	)
+VALUES	('ICON_CITYSTATE_CSE_CONSULAR',		'ICON_ATLAS_CSE_CONSULAR',			0		),
+		('ICON_ENVOY_BONUS_CSE_CONSULAR',	'ICON_ATLAS_CSE_CONSULAR_ENVOY',	0		);

@@ -7,7 +7,7 @@
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModValidation (Version) VALUES ('CSE_CATALHOYUK');
+INSERT INTO ModValidation (Version) VALUES ('CSE_AZCAPOTZALCO');
 
 -----------------------------------------------
 -- CSE_Master
@@ -18,8 +18,8 @@ INSERT INTO ModValidation (Version) VALUES ('CSE_CATALHOYUK');
 -----------------------------------------------
 
 INSERT INTO CSE_Master
-		(CityState,			ProposedType,		FallbackType,	FallbackCity,	Ethnicity,			Requires,	Removed	)
-VALUES	('CSE_CATALHOYUK',	'CSE_AGRICULTURAL',	'TRADE',		'KONYA',		'ETHNICITY_MEDIT',	'BASE',		NULL	);
+		(CityState,				ProposedType,	FallbackType,	FallbackCity,	Ethnicity,				Requires,	Removed	)
+VALUES	('CSE_AZCAPOTZALCO',	'CSE_CONSULAR',	'SCIENTIFIC',	'CHICOMOZTOC',	'ETHNICITY_SOUTHAM',	'XP1',		NULL	);
 
 -----------------------------------------------
 -- CSE_StartBias
@@ -30,6 +30,5 @@ VALUES	('CSE_CATALHOYUK',	'CSE_AGRICULTURAL',	'TRADE',		'KONYA',		'ETHNICITY_MED
 -----------------------------------------------
 
 INSERT INTO CSE_StartBias
-		(CityState,			Type,			Object,			Tier	)
-VALUES	('CSE_CATALHOYUK',	'TERRAIN',		'PLAINS',		5		),
-		('CSE_CATALHOYUK',	'TERRAIN',		'PLAINS_HILLS',	5		);
+		(CityState,				Type,		Object,		Tier	)
+VALUES	('CSE_AZCAPOTZALCO',	'FEATURE',	'JUNGLE',	5		);

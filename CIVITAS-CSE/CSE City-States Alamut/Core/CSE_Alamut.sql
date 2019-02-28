@@ -9,7 +9,7 @@
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModCheck (ModType) VALUES ('CSE_ALAMUT');
+INSERT INTO ModValidation (Version) VALUES ('CSE_ALAMUT');
 
 -----------------------------------------------
 -- CSE_Master

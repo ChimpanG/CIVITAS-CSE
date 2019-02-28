@@ -1,11 +1,12 @@
 Starting AssetCooker...
+OPENCL ACCELERATION IS NOT AVAILABLE!  Your cooks will be SLOOOOWWW!  Please inform an engineer.
 XLP cook starting...
 \\WDMYCLOUD\Sam\Projects\Modding\Civ VI\IdeaProjects\GitHub\CIVITAS-CSE\CIVITAS-CSE\CSE Types Entertainment\XLPs\Icons.xlp
 Opened output file: C:\Users\Sam\Documents\My Games\Sid Meier's Civilization VI\Mods\CSE Types Entertainment\Platforms\MacOS\BLPs/UI/Icons.blp    For XLP: '\\WDMYCLOUD\Sam\Projects\Modding\Civ VI\IdeaProjects\GitHub\CIVITAS-CSE\CIVITAS-CSE\CSE Types Entertainment\XLPs\Icons.xlp'
 Starting 'UI/Icons'
 Load finished for: 'UI/Icons' in 0.006 seconds
-Cook finished for: 'UI/Icons' in 0.009 seconds
+Cook finished for: 'UI/Icons' in 0.012 seconds
 Disk write finished for: 'UI/Icons' in 0.004 seconds
 Cleanup finished for: 'UI/Icons' in 0.000 seconds
 XLP cook completed with success.
-Cook completed in 0.175 seconds
+Cook completed in 0.049 seconds

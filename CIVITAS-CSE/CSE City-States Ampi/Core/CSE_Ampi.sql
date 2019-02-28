@@ -9,7 +9,7 @@
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModCheck (ModType) VALUES ('CSE_AMPI');
+INSERT INTO ModValidation (Version) VALUES ('CSE_AMPI');
 
 -----------------------------------------------
 -- CSE_Master

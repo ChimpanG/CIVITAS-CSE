@@ -26,6 +26,9 @@ local MIN_ENVOY_TOKENS_SUZERAIN			:number = 3;	--TODO: expose via game core
 local NUM_ENVOY_TOKENS_FOR_FIRST_BONUS	:number = 1;
 local NUM_ENVOY_TOKENS_FOR_SECOND_BONUS	:number = 3;
 local NUM_ENVOY_TOKENS_FOR_THIRD_BONUS	:number = 6;
+-- Chimp --
+local NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS	:number = 10;
+-- /Chimp --
 local MAX_BEFORE_TRUNC_SUZERAIN:number = 310;
 local DIPLO_PIP_INFO = {};	
 		DIPLO_PIP_INFO["DIPLO_STATE_PROTECTOR"]		= { IconName="ICON_RELATIONSHIP_SUZERAIN",	Tooltip="LOC_CITY_STATES_DIPLO_SUZERAIN"};
@@ -79,7 +82,16 @@ local m_isLocalPlayerTurn		:boolean = true;
 -- C15 --
 local tCityStateTypes = {}
 for row in GameInfo.CSE_ClassTypes() do
-	tCityStateTypes[row.Type] = {TypeName = Locale.Lookup(row.TypeName), LeaderType = row.LeaderType, SmallBonus = Locale.Lookup(row.SmallBonus), MediumBonus = Locale.Lookup(row.MediumBonus), LargeBonus = Locale.Lookup(row.LargeBonus), BonusIcon = row.BonusIcon, TypeIcon = row.TypeIcon}
+	tCityStateTypes[row.Type] = {TypeName = Locale.Lookup(row.TypeName),
+	LeaderType = row.LeaderType,
+	SmallBonus = Locale.Lookup(row.SmallBonus),
+	MediumBonus = Locale.Lookup(row.MediumBonus),
+	LargeBonus = Locale.Lookup(row.LargeBonus),
+	-- Chimp --
+	LargestBonus = Locale.Lookup(row.LargestBonus),
+	-- /Chimp --
+	BonusIcon = row.BonusIcon,
+	TypeIcon = row.TypeIcon}
 end
 -- /C15 --
 
@@ -154,6 +166,9 @@ function GetBonusText( playerID:number, envoyTokenNum:number )
 	if envoyTokenNum == NUM_ENVOY_TOKENS_FOR_FIRST_BONUS then bonusTypeText = Locale.Lookup("LOC_MINOR_CIV_SMALL_INFLUENCE_ENVOYS");
 	elseif envoyTokenNum == NUM_ENVOY_TOKENS_FOR_SECOND_BONUS then bonusTypeText = Locale.Lookup("LOC_MINOR_CIV_MEDIUM_INFLUENCE_ENVOYS");
 	elseif envoyTokenNum == NUM_ENVOY_TOKENS_FOR_THIRD_BONUS then bonusTypeText = Locale.Lookup("LOC_MINOR_CIV_LARGE_INFLUENCE_ENVOYS");
+	-- Chimp --
+	elseif envoyTokenNum == NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS then bonusTypeText = Locale.Lookup("LOC_MINOR_CIV_LARGEST_INFLUENCE_ENVOYS");
+	-- /Chimp --
 	else UI.DataError("Unknown envoy number for city-state type bonus:" .. tostring(envoyTokenNum));
 	end
 	
@@ -169,6 +184,10 @@ function GetBonusText( playerID:number, envoyTokenNum:number )
 			bonusDetailsText = tCSType.MediumBonus
 		elseif envoyTokenNum == NUM_ENVOY_TOKENS_FOR_THIRD_BONUS then 
 			bonusDetailsText = tCSType.LargeBonus
+		-- Chimp --
+		elseif envoyTokenNum == NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS then 
+			bonusDetailsText = tCSType.LargestBonus
+		-- /Chimp --
 		else 
 			UI.DataError("Unknown envoy number for city-state type bonus: " .. tostring(envoyTokenNum));
 		end
@@ -869,21 +888,32 @@ function AddCityStateRow( kCityState:table )
 	textureOffsetX, textureOffsetY, textureSheet = GetBonusIconAtlasPieces( kCityState, 26 );
 
 	kInst.BonusImage1:SetTexture( kCityState.isBonus1 and "CityState_BonusSlotOn" or "CityState_BonusSlotOff" );
-	kInst.BonusImage1:SetToolTipString( kCityState.Bonuses[1].Title .."[NEWLINE]".. kCityState.Bonuses[1].Details );	
-
+	-- kInst.BonusImage1:SetToolTipString( kCityState.Bonuses[1].Title .."[NEWLINE]".. kCityState.Bonuses[1].Details );	
+	kInst.BonusImage1:SetToolTipString( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_FIRST_BONUS].Title .."[NEWLINE]".. kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_FIRST_BONUS].Details ); -- Chimp
 	kInst.BonusIcon1:SetTexture( textureOffsetX, textureOffsetY, textureSheet );
 	kInst.BonusIcon1:SetColor( kCityState.isBonus1 and kCityState.ColorSecondary or COLOR_ICON_BONUS_OFF );
 	kInst.BonusText1:SetColor( kCityState.isBonus1 and COLOR_TEXT_BONUS_ON or COLOR_TEXT_BONUS_OFF )
+	
 	kInst.BonusImage3:SetTexture( kCityState.isBonus3 and "CityState_BonusSlotOn" or "CityState_BonusSlotOff" );
-	kInst.BonusImage3:SetToolTipString( kCityState.Bonuses[3].Title .."[NEWLINE]".. kCityState.Bonuses[3].Details );
+	-- kInst.BonusImage3:SetToolTipString( kCityState.Bonuses[3].Title .."[NEWLINE]".. kCityState.Bonuses[3].Details );
+	kInst.BonusImage3:SetToolTipString( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_SECOND_BONUS].Title .."[NEWLINE]".. kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_SECOND_BONUS].Details ); -- Chimp
 	kInst.BonusIcon3:SetTexture( textureOffsetX, textureOffsetY, textureSheet );
 	kInst.BonusIcon3:SetColor( kCityState.isBonus3 and kCityState.ColorSecondary or COLOR_ICON_BONUS_OFF );
 	kInst.BonusText3:SetColor( kCityState.isBonus3 and COLOR_TEXT_BONUS_ON or COLOR_TEXT_BONUS_OFF )
+
 	kInst.BonusImage6:SetTexture( kCityState.isBonus6 and "CityState_BonusSlotOn" or "CityState_BonusSlotOff" );
-	kInst.BonusImage6:SetToolTipString( kCityState.Bonuses[6].Title .."[NEWLINE]".. kCityState.Bonuses[6].Details );
+	-- kInst.BonusImage6:SetToolTipString( kCityState.Bonuses[6].Title .."[NEWLINE]".. kCityState.Bonuses[6].Details );
+	kInst.BonusImage6:SetToolTipString( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_THIRD_BONUS].Title .."[NEWLINE]".. kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_THIRD_BONUS].Details ); -- Chimp
 	kInst.BonusIcon6:SetTexture( textureOffsetX, textureOffsetY, textureSheet );
 	kInst.BonusIcon6:SetColor( kCityState.isBonus6 and kCityState.ColorSecondary or COLOR_ICON_BONUS_OFF );	
 	kInst.BonusText6:SetColor( kCityState.isBonus6 and COLOR_TEXT_BONUS_ON or COLOR_TEXT_BONUS_OFF )
+	-- Chimp --
+	kInst.BonusImage10:SetTexture( kCityState.isBonus10 and "CityState_BonusSlotOn" or "CityState_BonusSlotOff" );
+	kInst.BonusImage10:SetToolTipString( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS].Title .."[NEWLINE]".. kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS].Details );
+	kInst.BonusIcon10:SetTexture( textureOffsetX, textureOffsetY, textureSheet );
+	kInst.BonusIcon10:SetColor( kCityState.isBonus10 and kCityState.ColorSecondary or COLOR_ICON_BONUS_OFF );	
+	kInst.BonusText10:SetColor( kCityState.isBonus10 and COLOR_TEXT_BONUS_ON or COLOR_TEXT_BONUS_OFF )
+	-- /Chimp --
 	kInst.BonusImageSuzerainOff:SetHide( kCityState.isBonusSuzerain );
 	kInst.BonusImageSuzerainOff:SetColor( COLOR_ICON_BONUS_OFF );
 	kInst.BonusImageSuzerainOn:SetHide( not kCityState.isBonusSuzerain );
@@ -984,6 +1014,17 @@ function ViewList()
 					kItem.Title:SetText( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_THIRD_BONUS].Title );
 					kItem.Details:SetText( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_THIRD_BONUS].Details );
 				end
+
+				-- Chimp --
+				if kCityState.isBonus10 then
+					kItem		= m_BonusItemIM:GetInstance();
+					kItem.Icon:SetTexture( textureOffsetX, textureOffsetY, textureSheet );	-- Same as above
+					kItem.Icon:SetColor( kCityState.ColorSecondary );
+					kItem.Title:SetColor( kCityState.ColorSecondary );
+					kItem.Title:SetText( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS].Title );
+					kItem.Details:SetText( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS].Details );
+				end
+				-- /Chimp --
 
 				if kCityState.isBonusSuzerain then
 					kItem		= m_BonusItemIM:GetInstance();
@@ -1104,7 +1145,7 @@ function ViewCityState( iPlayer:number )
 		local warPeaceTooltip:string = "";
 		if kCityState.isAtWar then
 			Controls.PeaceWarButton:SetText( Locale.Lookup("LOC_CITY_STATES_MAKE_PEACE") );
-			Controls.PeaceWarButton:SetDisabled( not kCityState.CanMakePeaceWith );		
+			Controls.PeaceWarButton:SetDisabled( not kCityState.CanMakePeaceWith );
 			if not kCityState.CanMakePeaceWith then
 				if(GlobalParameters.DIPLOMACY_WAR_LAST_FOREVER == 1 or GlobalParameters.DIPLOMACY_WAR_LAST_FOREVER == true) then
 					warPeaceTooltip = warPeaceTooltip .. Locale.Lookup("LOC_CITY_STATES_TURNS_WAR_NO_PEACE");
@@ -1137,9 +1178,29 @@ function ViewCityState( iPlayer:number )
 			Controls.LevyMilitaryButton:SetToolTipString(levyTooltip);
 		end 
 		Controls.LevyMilitaryButton:RegisterCallback( Mouse.eLClick, function() OnLevyMilitary( kCityState ); end );
+
+		-- Chimp --
+--[[
+		Controls.GiftUnitButton:SetHide( false ); -- Make button visible
+		local giftUnitTooltip:string = "";
+		if kCityState.isAtWar then
+			Controls.GiftUnitButton:SetDisabled ( true ); -- Disable button if at war with City-State	
+			giftUnitTooltip = Locale.Lookup("LOC_CITY_STATES_GIFT_UNIT_WAR");
+		else
+			Controls.GiftUnitButton:SetDisabled ( false );
+			giftUnitTooltip = Locale.Lookup("LOC_CITY_STATES_GIFT_UNIT_PEACE");
+		end
+		Controls.GiftUnitButton:SetToolTipString( giftUnitTooltip );
+		-- Controls.GiftUnitButton:RegisterCallback ( Mouse.eLClick, function() OnToggleGiftUnit( kCityState ); end ); -- Toggle gift unit panel
+--]]
+		-- /Chimp --
+
 	else
 		Controls.LevyMilitaryButton:SetHide(true);
 		Controls.PeaceWarButton:SetHide(true);
+		-- Chimp --
+		Controls.GiftUnitButton:SetHide(true);
+		-- /Chimp --
 	end
 
 	Controls.TypeValue:SetText( GetTypeName(kCityState) );
@@ -1195,6 +1256,14 @@ function ViewCityState( iPlayer:number )
 		kItem.Title:SetText( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_THIRD_BONUS].Title );
 		kItem.Details:SetText( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_THIRD_BONUS].Details );
 		ColorizeBonusItem( kCityState.isBonus6, kItem, kCityState );
+
+		-- Chimp --
+		kItem		= m_EnvoysBonusItemIM:GetInstance();
+		kItem.Icon:SetTexture( textureOffsetX, textureOffsetY, textureSheet );	-- Same as above
+		kItem.Title:SetText( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS].Title );
+		kItem.Details:SetText( kCityState.Bonuses[NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS].Details );
+		ColorizeBonusItem( kCityState.isBonus10, kItem, kCityState );
+		-- /Chimp --
 
 		kItem		= m_EnvoysBonusItemIM:GetInstance();
 		textureOffsetX, textureOffsetY, textureSheet = IconManager:FindIconAtlas("ICON_ENVOY_BONUS_SUZERAIN", 50);
@@ -1493,6 +1562,9 @@ function GetData()
 				isBonus1				= (envoyTokens >= NUM_ENVOY_TOKENS_FOR_FIRST_BONUS),	-- WARNING: Inferring game rules to set bonus thresholds.
 				isBonus3				= (envoyTokens >= NUM_ENVOY_TOKENS_FOR_SECOND_BONUS),	-- WARNING: Inferring game rules to set bonus thresholds.
 				isBonus6				= (envoyTokens >= NUM_ENVOY_TOKENS_FOR_THIRD_BONUS),	-- WARNING: Inferring game rules to set bonus thresholds.
+				-- Chimp --
+				isBonus10				= (envoyTokens >= NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS),	-- WARNING: Inferring game rules to set bonus thresholds.
+				-- /Chimp --
 				isBonusSuzerain			= (suzerainID == localPlayerID),
 				isHasMet				= pLocalPlayer:GetDiplomacy():HasMet( iPlayer ),				
 				iScore					= pPlayer:GetDiplomaticAI():GetDiplomaticScore( localPlayerID ),
@@ -1543,6 +1615,15 @@ function GetData()
 					isNewBonusAchieved = true;
 				end
 			end
+			-- Chimp --
+			title, details = GetBonusText( iPlayer, NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS );
+			kCityState.Bonuses[ NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS ] = { Title = title, Details = details } 
+			if kCityState.isBonus10 then
+				if m_kLastCityStates ~= nil and not m_kLastCityStates[iPlayer].isBonus10 then
+					isNewBonusAchieved = true;
+				end
+			end
+			-- /Chimp --
 			details = GetSuzerainBonusText( iPlayer );
 			kCityState.Bonuses["Suzerain"] = { 
 				Title = Locale.Lookup("LOC_CITY_STATES_SUZERAIN_ENVOYS"), 
@@ -1774,12 +1855,27 @@ function Initialize()
 		return;
 	end
 
+	-- Chimp --
+
+--[[
 	-- Check:
 	if	NUM_ENVOY_TOKENS_FOR_FIRST_BONUS   == NUM_ENVOY_TOKENS_FOR_SECOND_BONUS or
 		NUM_ENVOY_TOKENS_FOR_SECOND_BONUS  == NUM_ENVOY_TOKENS_FOR_THIRD_BONUS	or
 		NUM_ENVOY_TOKENS_FOR_FIRST_BONUS   == NUM_ENVOY_TOKENS_FOR_THIRD_BONUS then
 		alert("At least 2 city state bonuses have the same value, this will cause issues!");
 	end
+--]]
+	
+	if	NUM_ENVOY_TOKENS_FOR_FIRST_BONUS   == NUM_ENVOY_TOKENS_FOR_SECOND_BONUS or
+		NUM_ENVOY_TOKENS_FOR_FIRST_BONUS   == NUM_ENVOY_TOKENS_FOR_THIRD_BONUS or
+		NUM_ENVOY_TOKENS_FOR_FIRST_BONUS   == NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS or
+		NUM_ENVOY_TOKENS_FOR_SECOND_BONUS  == NUM_ENVOY_TOKENS_FOR_THIRD_BONUS	or
+		NUM_ENVOY_TOKENS_FOR_SECOND_BONUS  == NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS	or
+		NUM_ENVOY_TOKENS_FOR_THIRD_BONUS   == NUM_ENVOY_TOKENS_FOR_FOURTH_BONUS	then
+		alert("At least 2 city state bonuses have the same value, this will cause issues!");
+	end
+	
+	-- /Chimp --
 
 	m_kScreenSlideAnim = CreateScreenAnimation( Controls.SlideAnim );
 

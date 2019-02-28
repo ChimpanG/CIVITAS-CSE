@@ -9,7 +9,7 @@
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModCheck (ModType) VALUES ('CSE_ANURADHAPURA');
+INSERT INTO ModValidation (Version) VALUES ('CSE_ANURADHAPURA');
 
 -----------------------------------------------
 -- CSE_Master

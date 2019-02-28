@@ -7,7 +7,7 @@
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModCheck (ModType) VALUES ('CSE_CONSULAR');
+INSERT INTO ModValidation (Version) VALUES ('CSE_CONSULAR');
 
 -----------------------------------------------
 -- CSE_ClassTypes

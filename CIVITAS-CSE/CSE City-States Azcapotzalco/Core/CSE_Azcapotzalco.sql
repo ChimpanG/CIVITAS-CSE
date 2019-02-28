@@ -9,7 +9,7 @@
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModCheck (ModType) VALUES ('CSE_AZCAPOTZALCO');
+INSERT INTO ModValidation (Version) VALUES ('CSE_AZCAPOTZALCO');
 
 -----------------------------------------------
 -- CSE_Master
@@ -33,7 +33,7 @@ VALUES	('CSE_AZCAPOTZALCO',	'CONSULAR',		'SCIENCE',		NULL,			'ETHNICITY_SOUTHAM'
 
 INSERT INTO CSE_StartBias
 		(CityState,				Type,		Object,		Tier	)
-VALUES	('CSE_AZCAPOTZALCO',	'FEATURE',	'JUNG;E',	3		);
+VALUES	('CSE_AZCAPOTZALCO',	'FEATURE',	'JUNGLE',	3		);
 
 -----------------------------------------------
 -- TraitModifiers

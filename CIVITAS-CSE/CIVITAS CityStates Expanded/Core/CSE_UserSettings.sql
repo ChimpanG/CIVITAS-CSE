@@ -70,15 +70,6 @@ VALUES
 	('WALLS_START',		0	),
 
 -----------------------------------------------
--- SECTION G: Should City-States receive their own Suzerain bonuses?
--- Context: La Venta plz, build your own Colossal Heads.
-
--- Game Default: 0
------------------------------------------------
-
-	('RECEIVE_OWN_BONUS',	0	),
-
------------------------------------------------
 -- SECTION H: Should City-States build Recon units?
 
 -- Game Default: 1
@@ -214,8 +205,38 @@ VALUES
 -----------------------------------------------
 
 	('MOMENT_FIRST_SUZERAIN',				2	), -- Game Default: 2
-	('MOMENT_OUSTED_SUZERAIN_DURING_WAR',	2	); -- Game Default: 2
+	('MOMENT_OUSTED_SUZERAIN_DURING_WAR',	2	), -- Game Default: 2
 
+-----------------------------------------------		
+-- SECTION U: Should declaring a Protectorate War be an independent action (not formal war) that does not require denouncement?
+-- Context: Waiting 5 turns to pass is enough time for the AI to capture a city-state, making protectorate wars very rare.
+
+-- Game Default: 0
+-- Our Default: 1
+-----------------------------------------------
+
+	('INDEPENDENT_PROTECTORATE_WAR',	1	),
+
+-----------------------------------------------		
+-- SECTION V: Should Protectorate War be available to declare from the start of the game?
+-- Context: If the ability to declare war on a City-State is available, why isn't the ability to protect them?
+
+-- Game Default: 0
+-- Our Default: 1
+-----------------------------------------------
+
+	('DECLARE_PROTECTORATE_WAR',	1	),
+
+-----------------------------------------------		
+-- SECTION W: Should declaring war on a City-State receive warmonger penalties?
+-- Context: One of the reasons why the AI so frequently attacks City-States is because they receive no warmonger penalties for doing so.
+
+-- Game Default: 0
+-- Our Default: 1
+-----------------------------------------------
+
+	('CITY_STATE_WARMONGER',	1	);
+	
 -----------------------------------------------		
 -- SECTION Z: Disable City-States
 -- Change 0 to 1 to disable a City-State.
@@ -227,44 +248,44 @@ VALUES
 INSERT INTO CSE_UserSettings (Setting, Section, Value)
 VALUES
 
-	('AKKAD',			'DISABLED',	0	),
-	('AMSTERDAM',		'DISABLED', 0	),
-	('ANTANANARIVO',	'DISABLED', 0	),
-	('ANTIOCH',			'DISABLED', 0	),
-	('ARMAGH',			'DISABLED', 0	),
-	('AUCKLAND',		'DISABLED', 0	),
-	('BABYLON',			'DISABLED', 0	),
-	('BOLOGNA',			'DISABLED', 0	),
+	('AKKAD',			'DISABLED',	1	),
+	('AMSTERDAM',		'DISABLED', 1	),
+	('ANTANANARIVO',	'DISABLED', 1	),
+	('ANTIOCH',			'DISABLED', 1	),
+	('ARMAGH',			'DISABLED', 1	),
+	('AUCKLAND',		'DISABLED', 1	),
+	('BABYLON',			'DISABLED', 1	),
+	('BOLOGNA',			'DISABLED', 1	),
 	('BUENOS_AIRES',	'DISABLED', 0	),
 	('BRUSSELS',		'DISABLED', 0	),
-	('CAHOKIA',			'DISABLED', 0	),
-	('CARDIFF',			'DISABLED', 0	),
-	('CARTHAGE',		'DISABLED', 0	),
-	('FEZ',				'DISABLED', 0	),
+	('CAHOKIA',			'DISABLED', 1	),
+	('CARDIFF',			'DISABLED', 1	),
+	('CARTHAGE',		'DISABLED', 1	),
+	('FEZ',				'DISABLED', 1	),
 	('GENEVA',			'DISABLED', 0	),
-	('GRANADA',			'DISABLED', 0	),
-	('HATTUSA',			'DISABLED', 0	),
-	('HONG_KONG',		'DISABLED', 0	),
+	('GRANADA',			'DISABLED', 1	),
+	('HATTUSA',			'DISABLED', 1	),
+	('HONG_KONG',		'DISABLED', 1	),
 	('JAKARTA',			'DISABLED', 0	),
-	('JERUSALEM',		'DISABLED', 0	),
-	('KABUL',			'DISABLED', 0	),
-	('KANDY',			'DISABLED', 0	),
-	('KUMASI',			'DISABLED', 0	),
-	('LA_VENTA',		'DISABLED', 0	),
+	('JERUSALEM',		'DISABLED', 1	),
+	('KABUL',			'DISABLED', 1	),
+	('KANDY',			'DISABLED', 1	),
+	('KUMASI',			'DISABLED', 1	),
+	('LA_VENTA',		'DISABLED', 1	),
 	('LISBON',			'DISABLED', 0	),
 	('MEXICO_CITY',		'DISABLED', 0	),
-	('MOHENJO_DARO',	'DISABLED', 0	),
-	('MUSCAT',			'DISABLED', 0	),
-	('NAN_MADOL',		'DISABLED', 0	),
-	('NAZCA',			'DISABLED', 0	),
+	('MOHENJO_DARO',	'DISABLED', 1	),
+	('MUSCAT',			'DISABLED', 1	),
+	('NAN_MADOL',		'DISABLED', 1	),
+	('NAZCA',			'DISABLED', 1	),
 	('NGAZARGAMU',		'DISABLED', 0	),
-	('PALENQUE',		'DISABLED', 0	),
-	('PRESLAV',			'DISABLED', 0	),
-	('RAPA_NUI',		'DISABLED', 0	),
-	('SEOUL',			'DISABLED', 0	),
-	('STOCKHOLM',		'DISABLED', 0	),
-	('TORONTO',			'DISABLED', 0	),
-	('VALLETTA',		'DISABLED', 0	),
-	('VILNIUS',			'DISABLED', 0	),
-	('YEREVAN',			'DISABLED', 0	),
-	('ZANZIBAR',		'DISABLED', 0	);
+	('PALENQUE',		'DISABLED', 1	),
+	('PRESLAV',			'DISABLED', 1	),
+	('RAPA_NUI',		'DISABLED', 1	),
+	('SEOUL',			'DISABLED', 1	),
+	('STOCKHOLM',		'DISABLED', 1	),
+	('TORONTO',			'DISABLED', 1	),
+	('VALLETTA',		'DISABLED', 1	),
+	('VILNIUS',			'DISABLED', 1	),
+	('YEREVAN',			'DISABLED', 1	),
+	('ZANZIBAR',		'DISABLED', 1	);

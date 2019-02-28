@@ -155,21 +155,6 @@ FROM	CSE_Master
 WHERE	New = 1;
 
 -----------------------------------------------
--- PlayerColors
------------------------------------------------
-
-DELETE FROM PlayerColors
-WHERE Type IN (SELECT CivilizationType FROM CSE_Master);
-
-INSERT INTO PlayerColors (Type, Usage, PrimaryColor, SecondaryColor, TextColor)
-SELECT	CivilizationType,
-		'Minor',
-		'COLOR_PLAYER_CITY_STATE_PRIMARY',
-		ColorRef,
-		ColorRef
-FROM	CSE_Master;
-
------------------------------------------------
 -- StartBias
 -----------------------------------------------
 

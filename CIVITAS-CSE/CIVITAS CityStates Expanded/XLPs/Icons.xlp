@@ -57,6 +57,54 @@
 			<m_EntryID text="CSE_MILITARISTIC_ENVOY_50"/>
 			<m_ObjectName text="CSE_MILITARISTIC_ENVOY_50"/>
 		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_22"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_22"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_256"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_256"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_30"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_30"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_36"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_36"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_40"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_40"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_44"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_44"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_48"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_48"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_64"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_64"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_68"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_68"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_80"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_80"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_ENVOY_26"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_ENVOY_26"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CSE_INDUSTRIAL_ENVOY_50"/>
+			<m_ObjectName text="CSE_INDUSTRIAL_ENVOY_50"/>
+		</Element>
 	</m_Entries>
 	<m_AllowedPlatforms>
 		<Element>WINDOWS</Element>

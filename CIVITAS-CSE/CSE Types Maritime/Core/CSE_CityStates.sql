@@ -8,7 +8,7 @@
 -----------------------------------------------
 
 UPDATE	CSE_Master
-SET		CityStateType = 'CSE_MARITIME'
+SET		ProposedType = 'CSE_MARITIME'
 WHERE	CityState
 IN		(
 		'JAKARTA',

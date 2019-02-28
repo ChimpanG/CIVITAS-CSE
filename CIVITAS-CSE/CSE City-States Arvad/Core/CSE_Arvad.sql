@@ -9,7 +9,7 @@
 -- ModCheck
 -----------------------------------------------
 
-INSERT INTO ModCheck (ModType) VALUES ('CSE_ARVAD');
+INSERT INTO ModValidation (Version) VALUES ('CSE_ARVAD');
 
 -----------------------------------------------
 -- CSE_Master
