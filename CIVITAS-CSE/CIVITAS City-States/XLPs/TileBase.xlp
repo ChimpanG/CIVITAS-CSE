@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AssetObjects..XLP>
+	<m_Version>
+		<major>4</major>
+		<minor>0</minor>
+		<build>415</build>
+		<revision>990</revision>
+	</m_Version>
+	<m_ClassName text="TileBase"/>
+	<m_PackageName text="TileBase"/>
+	<m_Entries>
+		<Element>
+			<m_EntryID text="CVS_IMP_GreatKiva"/>
+			<m_ObjectName text="CVS_IMP_GreatKiva"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CVS_IMP_Stupa"/>
+			<m_ObjectName text="CVS_IMP_Stupa"/>
+		</Element>
+		<Element>
+			<m_EntryID text="GreatKiva"/>
+			<m_ObjectName text="GreatKiva"/>
+		</Element>
+		<Element>
+			<m_EntryID text="Kiva_DIS_CTY_AB_Bld_04"/>
+			<m_ObjectName text="Kiva_DIS_CTY_AB_Bld_04"/>
+		</Element>
+		<Element>
+			<m_EntryID text="Kiva_DIS_CTY_AB_Bld_05"/>
+			<m_ObjectName text="Kiva_DIS_CTY_AB_Bld_05"/>
+		</Element>
+		<Element>
+			<m_EntryID text="Kiva_DIS_CTY_AB_Bld_06"/>
+			<m_ObjectName text="Kiva_DIS_CTY_AB_Bld_06"/>
+		</Element>
+		<Element>
+			<m_EntryID text="Kiva_DIS_CTY_AB_Bld_09"/>
+			<m_ObjectName text="Kiva_DIS_CTY_AB_Bld_09"/>
+		</Element>
+		<Element>
+			<m_EntryID text="Kiva_DIS_CTY_AB_Bld_11"/>
+			<m_ObjectName text="Kiva_DIS_CTY_AB_Bld_11"/>
+		</Element>
+		<Element>
+			<m_EntryID text="Kiva_DIS_CTY_RNA_Bld_10"/>
+			<m_ObjectName text="Kiva_DIS_CTY_RNA_Bld_10"/>
+		</Element>
+		<Element>
+			<m_EntryID text="Kiva_DIS_CTY_RSS_Bld_01"/>
+			<m_ObjectName text="Kiva_DIS_CTY_RSS_Bld_01"/>
+		</Element>
+		<Element>
+			<m_EntryID text="Kiva_Model"/>
+			<m_ObjectName text="Kiva_Model"/>
+		</Element>
+	</m_Entries>
+	<m_AllowedPlatforms>
+		<Element>WINDOWS</Element>
+		<Element>LINUX</Element>
+		<Element>MACOS</Element>
+		<Element>IOS</Element>
+	</m_AllowedPlatforms>
+</AssetObjects..XLP>
+

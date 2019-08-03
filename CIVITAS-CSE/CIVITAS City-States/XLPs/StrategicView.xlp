@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AssetObjects..XLP>
+	<m_Version>
+		<major>4</major>
+		<minor>0</minor>
+		<build>415</build>
+		<revision>990</revision>
+	</m_Version>
+	<m_ClassName text="StrategicView_Sprite"/>
+	<m_PackageName text="UI/StrategicView"/>
+	<m_Entries>
+		<Element>
+			<m_EntryID text="CVS_GreatKiva_Revealed"/>
+			<m_ObjectName text="CVS_GreatKiva_Revealed"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CVS_GreatKiva_Revealed_Pillaged"/>
+			<m_ObjectName text="CVS_GreatKiva_Revealed_Pillaged"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CVS_GreatKiva_Visible"/>
+			<m_ObjectName text="CVS_GreatKiva_Visible"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CVS_GreatKiva_Visible_Pillaged"/>
+			<m_ObjectName text="CVS_GreatKiva_Visible_Pillaged"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CVS_Stupa_Revealed"/>
+			<m_ObjectName text="CVS_Stupa_Revealed"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CVS_Stupa_Revealed_Pillaged"/>
+			<m_ObjectName text="CVS_Stupa_Revealed_Pillaged"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CVS_Stupa_Visible"/>
+			<m_ObjectName text="CVS_Stupa_Visible"/>
+		</Element>
+		<Element>
+			<m_EntryID text="CVS_Stupa_Visible_Pillaged"/>
+			<m_ObjectName text="CVS_Stupa_Visible_Pillaged"/>
+		</Element>
+	</m_Entries>
+	<m_AllowedPlatforms>
+		<Element>WINDOWS</Element>
+		<Element>LINUX</Element>
+		<Element>MACOS</Element>
+		<Element>IOS</Element>
+	</m_AllowedPlatforms>
+</AssetObjects..XLP>
+

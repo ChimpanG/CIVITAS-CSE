@@ -1,4 +1,0 @@
-/*
-	Common
-	Authors: ChimpanG
-*/

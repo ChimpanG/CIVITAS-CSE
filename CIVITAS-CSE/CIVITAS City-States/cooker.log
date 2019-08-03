@@ -1,0 +1,13 @@
+Starting AssetCooker...
+OPENCL ACCELERATION IS NOT AVAILABLE!  Your cooks will be SLOOOOWWW!  Please inform an engineer.
+XLP cook starting...
+\\WDMYCLOUD\Sam\Projects\Modding\Civ VI\IdeaProjects\GitHub\CIVITAS-CSE\CIVITAS-CSE\CIVITAS City-States\XLPs\TileBase.xlp
+Opened output file: D:\Documents\my games\Sid Meier's Civilization VI\Mods\Mods\CIVITAS City-States\Platforms\MacOS\BLPs/TileBase.blp    For XLP: '\\WDMYCLOUD\Sam\Projects\Modding\Civ VI\IdeaProjects\GitHub\CIVITAS-CSE\CIVITAS-CSE\CIVITAS City-States\XLPs\TileBase.xlp'
+Could not load digest key: ''.  Using mod key to sign BLP.
+Starting 'TileBase'
+Load finished for: 'TileBase' in 6.960 seconds
+Cook finished for: 'TileBase' in 0.003 seconds
+Disk write finished for: 'TileBase' in 0.157 seconds
+Cleanup finished for: 'TileBase' in 0.011 seconds
+XLP cook completed with success.
+Cook completed in 7.182 seconds

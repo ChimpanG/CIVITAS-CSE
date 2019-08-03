@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# ModBuddy Solution File, Format Version 12.00
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CIVITAS City-States", "CIVITAS City-States\CIVITAS City-States.civ6proj", "{D2D9A0A4-DD35-48BC-B17D-48D577F9D927}"
+EndProject
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "CIVITAS City-States (Mekong)", "CIVITAS City-States (Mekong)\CIVITAS City-States (Mekong).civ6proj", "{AA64D7B3-8AF4-4E52-BB48-AA2A5DB873C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Civ6 = Default|Civ6
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2D9A0A4-DD35-48BC-B17D-48D577F9D927}.Default|Civ6.ActiveCfg = Default|Civ6
+		{D2D9A0A4-DD35-48BC-B17D-48D577F9D927}.Default|Civ6.Build.0 = Default|Civ6
+		{AA64D7B3-8AF4-4E52-BB48-AA2A5DB873C2}.Default|Civ6.ActiveCfg = Default|Civ6
+		{AA64D7B3-8AF4-4E52-BB48-AA2A5DB873C2}.Default|Civ6.Build.0 = Default|Civ6
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
