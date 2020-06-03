@@ -35,5 +35,11 @@ VALUES
 	("en_US",	"LOC_CSE_ENTERTAINMENT_TRAIT_SMALL_INFLUENCE_BONUS",		"+1 [ICON_AMENITIES] Amenity in the [ICON_CAPITAL] Capital."	),
 	("en_US",	"LOC_CSE_ENTERTAINMENT_TRAIT_MEDIUM_INFLUENCE_BONUS",		"+1 [ICON_AMENITIES] Amenity in every Arena or Ferris Wheel."		),
 	("en_US",	"LOC_CSE_ENTERTAINMENT_TRAIT_LARGE_INFLUENCE_BONUS",		"+1 [ICON_AMENITIES] Amenity in every Zoo or Aquarium."	),
-	("en_US",	"LOC_CSE_ENTERTAINMENT_TRAIT_LARGEST_INFLUENCE_BONUS",		"+1 [ICON_AMENITIES] Amenity in every Stadium or Aquatics Center."	);
+	("en_US",	"LOC_CSE_ENTERTAINMENT_TRAIT_LARGEST_INFLUENCE_BONUS",		"+1 [ICON_AMENITIES] Amenity in every Stadium or Aquatics Center."	),
+
+-----------------------------------------------
+-- Buildings
+-----------------------------------------------
+
+	("en_US",	"LOC_BUILDING_KILWA_KISIWANI_DESCRIPTION",	"+3 [ICON_ENVOY] Envoys when built. When you are the Suzerain of a City-State this city receives a +20% boost to the type bonus yields provided by that City-State. If you are the Suzerain to 3 or more City-States of that type an additional +20% boost is given to all your cities. Must be built on a flat tile adjacent to Coast."	);
 	

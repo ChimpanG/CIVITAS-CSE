@@ -1,13 +1,67 @@
 Starting AssetCooker...
-OPENCL ACCELERATION IS NOT AVAILABLE!  Your cooks will be SLOOOOWWW!  Please inform an engineer.
+Argument '--shaders' has been deprecated and is no longer used.
 XLP cook starting...
-\\WDMYCLOUD\Sam\Projects\Modding\Civ VI\IdeaProjects\GitHub\CIVITAS-CSE\CIVITAS-CSE\CIVITAS City-States\XLPs\TileBase.xlp
-Opened output file: D:\Documents\my games\Sid Meier's Civilization VI\Mods\Mods\CIVITAS City-States\Platforms\MacOS\BLPs/TileBase.blp    For XLP: '\\WDMYCLOUD\Sam\Projects\Modding\Civ VI\IdeaProjects\GitHub\CIVITAS-CSE\CIVITAS-CSE\CIVITAS City-States\XLPs\TileBase.xlp'
+Z:\Projects\Modding\Civ VI\IdeaProjects\GitHub\CIVITAS-CSE\CIVITAS-CSE\CIVITAS City-States\XLPs\TileBase.xlp
+Opened output file: D:\Documents\My Games\Sid Meier's Civilization VI\Mods\CIVITAS City-States\Platforms\MacOS\BLPs/TileBase.blp    For XLP: 'Z:\Projects\Modding\Civ VI\IdeaProjects\GitHub\CIVITAS-CSE\CIVITAS-CSE\CIVITAS City-States\XLPs\TileBase.xlp'
 Could not load digest key: ''.  Using mod key to sign BLP.
 Starting 'TileBase'
-Load finished for: 'TileBase' in 6.960 seconds
-Cook finished for: 'TileBase' in 0.003 seconds
-Disk write finished for: 'TileBase' in 0.157 seconds
+
+****** Log from Geometry: 'IMP_Mine_AN_RockA' ********
+--------------
+Geo IMP_Mine_AN_RockA mesh IMP_Mine_AN_RockA flagged for possible vertex duplication. Vertex Count: 216, Index Count: 378, Tri Count 126, Reused Vertices: 114, Duplicate Vertices: 0, Duplicate Positions: 72, Vertex:Tri Ratio: 1.71
+
+****** Log from Geometry: 'IMP_Stepwell_Decal' ********
+--------------
+Geo IMP_Stepwell_Decal Mesh Decal_ANC_Rect_Patch042 : 2 vertices removed by tangent merger.
+
+****** Log from Geometry: 'DIS_CTY_AB_Bld_04' ********
+--------------
+Geo DIS_CTY_AB_Bld_04 mesh DIS_CTY_AB_Bld_04 flagged for possible vertex duplication. Vertex Count: 249, Index Count: 390, Tri Count 130, Reused Vertices: 129, Duplicate Vertices: 0, Duplicate Positions: 86, Vertex:Tri Ratio: 1.92
+
+****** Log from Geometry: 'DIS_CTY_AB_Bld_04_Decal' ********
+--------------
+Geo DIS_CTY_AB_Bld_04_Decal Mesh Decal_CLA_Rect_Sq_Patch161 : 4 vertices removed by tangent merger.
+
+****** Log from Geometry: 'DIS_CTY_AB_Bld_05' ********
+--------------
+Geo DIS_CTY_AB_Bld_05 mesh DIS_CTY_AB_Bld_05 flagged for possible vertex duplication. Vertex Count: 320, Index Count: 522, Tri Count 174, Reused Vertices: 172, Duplicate Vertices: 0, Duplicate Positions: 108, Vertex:Tri Ratio: 1.84
+
+****** Log from Geometry: 'DIS_CTY_AB_Bld_05_Decal' ********
+--------------
+Geo DIS_CTY_AB_Bld_05_Decal Mesh Decal_CLA_Rect_Sq_Patch177 : 8 vertices removed by tangent merger.
+
+****** Log from Geometry: 'DIS_CTY_AB_Bld_06' ********
+--------------
+Geo DIS_CTY_AB_Bld_06 mesh DIS_CTY_AB_Bld_06 flagged for possible vertex duplication. Vertex Count: 589, Index Count: 918, Tri Count 306, Reused Vertices: 301, Duplicate Vertices: 0, Duplicate Positions: 198, Vertex:Tri Ratio: 1.92
+
+****** Log from Geometry: 'DIS_CTY_AB_Bld_06_Decal' ********
+--------------
+Geo DIS_CTY_AB_Bld_06_Decal Mesh Decal_CLA_Rect_Sq_Patch168 : 8 vertices removed by tangent merger.
+
+****** Log from Geometry: 'DIS_CTY_AB_Bld_09' ********
+--------------
+Geo DIS_CTY_AB_Bld_09 mesh DIS_CTY_AB_Bld_09 flagged for possible vertex duplication. Vertex Count: 454, Index Count: 762, Tri Count 254, Reused Vertices: 243, Duplicate Vertices: 0, Duplicate Positions: 146, Vertex:Tri Ratio: 1.79
+
+****** Log from Geometry: 'DIS_CTY_AB_Bld_09_Decal' ********
+--------------
+Geo DIS_CTY_AB_Bld_09_Decal Mesh Decal_CLA_Rect_Sq_Patch165 : 4 vertices removed by tangent merger.
+
+****** Log from Geometry: 'DIS_CTY_AB_Bld_11_Decal' ********
+--------------
+Geo DIS_CTY_AB_Bld_11_Decal Mesh Decal_CLA_Rect_Sq_Patch152 : 4 vertices removed by tangent merger.
+
+****** Log from Geometry: 'DIS_CTY_RNA_Bld_10_decal' ********
+--------------
+Geo DIS_CTY_RNA_Bld_10_decal Mesh Decal_CLA_Rect_Sq_Patch108 : 2 vertices removed by tangent merger.
+Geo DIS_CTY_RNA_Bld_10_decal Mesh Decal_CLA_Rect_Sq_Patch095 : 2 vertices removed by tangent merger.
+
+****** Log from Geometry: 'DIS_CTY_RSS_Bld_01_Decal' ********
+--------------
+Geo DIS_CTY_RSS_Bld_01_Decal Mesh Decal_CLA_Rect_Sq_Patch149 : 2 vertices removed by tangent merger.
+Geo DIS_CTY_RSS_Bld_01_Decal Mesh Decal_CLA_Rect_Sq_Patch148 : 2 vertices removed by tangent merger.
+Load finished for: 'TileBase' in 13.451 seconds
+Cook finished for: 'TileBase' in 0.004 seconds
+Disk write finished for: 'TileBase' in 0.096 seconds
 Cleanup finished for: 'TileBase' in 0.011 seconds
 XLP cook completed with success.
-Cook completed in 7.182 seconds
+Cook completed in 13.610 seconds

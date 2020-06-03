@@ -136,7 +136,7 @@ VALUES	('CIVILIZATION_CSE_ALAMUT',			'GiantEarth',			45,		56	),
 		('CIVILIZATION_CSE_HALIN',			'GiantEarth',			71,		49	),
 		('CIVILIZATION_CSE_HALIN',			'GreatestEarthMap',		82,		40	),
 		('CIVILIZATION_CSE_HALIN',			'CordiformEarth',		62,		26	),
-		
+
 		('CIVILIZATION_CSE_HAVANA',			'GiantEarth',			149,	51	),
 		('CIVILIZATION_CSE_HAVANA',			'GreatestEarthMap',		22,		37	),
 		('CIVILIZATION_CSE_HAVANA',			'LargestEarthCustom',	198,	64	),

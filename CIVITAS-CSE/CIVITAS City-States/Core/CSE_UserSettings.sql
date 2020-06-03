@@ -90,7 +90,7 @@ VALUES
 
 -----------------------------------------------
 -- OPTION | Should City-States start with Walls outright?
--- Context: Barbossa is a dick.
+-- Context: Barbarossa is a dick.
 
 -- Game Default: 0
 -----------------------------------------------
@@ -252,6 +252,16 @@ VALUES
 	('CITY_STATE_WARMONGER',	150	),
 
 -----------------------------------------------		
+-- OPTION | Should Consular City states give Favor? or should they give loyalty?
+
+-- Our Default: 0 (Favor)
+
+-- Change to 1 if you'd like them to give loyalty instead (what they did before Gathering Storm)
+-----------------------------------------------
+
+	('CONSULAR_BONUS_TYPE',		0	),
+
+-----------------------------------------------		
 -- OPTION | How much Diplomatic Favor should you earn for being Suzerain? 
 
 -- Game Default: 1
@@ -262,7 +272,7 @@ VALUES
 -- NOTE: This will not change the tooltip text that tells you that you get +1 Favor per turn for being suzerain.
 -----------------------------------------------
 
-	('SUZERAIN_DIPLOMATIC_FAVOR',	0	);
+	('SUZERAIN_DIPLOMATIC_FAVOR',	1	);
 
 -----------------------------------------------		
 -- REMOVALS | Disable City-State Types
@@ -303,6 +313,7 @@ VALUES
 	('BOLOGNA',				'DISABLED', 0	), -- Requires XP2 (Gathering Storm)
 	('BUENOS_AIRES',		'DISABLED', 0	),
 	('BRUSSELS',			'DISABLED', 0	),
+	('CAGUANA',				'DISABLED', 0	), -- Requires DLC7 (Gran Colombia Maya)
 	('CAHOKIA',				'DISABLED', 0	), -- Requires XP2 (Gathering Storm)
 	('CARDIFF',				'DISABLED', 0	), -- Requires XP2 (Gathering Storm)
 	('CARTHAGE',			'DISABLED', 0	), -- Obsoletes with XP2 (Gathering Storm)
@@ -311,12 +322,14 @@ VALUES
 	('GRANADA',				'DISABLED',	0	),
 	('HATTUSA',				'DISABLED', 0	),
 	('HONG_KONG',			'DISABLED',	0	),
+	('HUNZA',				'DISABLED',	0	), -- Requires DLC7 (Gran Colombia Maya)
 	('JAKARTA',				'DISABLED',	0	), -- Name changes to Brunei with DLC6 (Khmer & Indonesia)
 	('JERUSALEM',			'DISABLED',	0	),
 	('KABUL',				'DISABLED',	0	),
 	('KANDY',				'DISABLED',	0	),
 	('KUMASI',				'DISABLED',	0	),
 	('LA_VENTA',			'DISABLED',	0	),
+	('LAHORE',				'DISABLED',	0	), -- Requires DLC7 (Gran Colombia Maya)
 	('LISBON',				'DISABLED',	0	),
 	('MEXICO_CITY',			'DISABLED',	0	), -- Requires XP2 (Gathering Storm)
 	('MOHENJO_DARO',		'DISABLED',	0	),
@@ -324,13 +337,15 @@ VALUES
 	('NAN_MADOL',			'DISABLED',	0	),
 	('NAZCA',				'DISABLED',	0	), -- Requires XP2 (Gathering Storm)
 	('NGAZARGAMU',			'DISABLED',	0	), -- Requires XP2 (Gathering Storm)
-	('PALENQUE',			'DISABLED',	0	), -- Requires DLC2 (Vikings Scenario)
+	('PALENQUE',			'DISABLED',	0	), -- Requires DLC2 (Vikings Scenario). Name changes to Mitla with DLC7 (Gran Colombia Maya)
 	('PRESLAV',				'DISABLED',	0	),
 	('RAPA_NUI',			'DISABLED',	0	), -- Requires XP2 (Gathering Storm)
 	('SEOUL',				'DISABLED',	0	), -- Obsoletes with XP1 (Rise and Fall)
 	('STOCKHOLM',			'DISABLED',	0	), -- Obsoletes with XP2 (Gathering Storm)
+	('TARUGA',				'DISABLED',	0	), -- Requires DLC7 (Gran Colombia Maya)
 	('TORONTO',				'DISABLED',	0	), -- Obsoletes with XP2 (Gathering Storm)
 	('VALLETTA',			'DISABLED',	0	),
+	('VATICAN_CITY',		'DISABLED',	0	), -- Requires DLC7 (Gran Colombia Maya)
 	('VILNIUS',				'DISABLED',	0	),
 	('YEREVAN',				'DISABLED',	0	),
 	('ZANZIBAR',			'DISABLED',	0	);

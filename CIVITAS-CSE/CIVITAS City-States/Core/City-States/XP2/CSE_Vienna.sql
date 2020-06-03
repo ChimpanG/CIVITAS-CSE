@@ -1,6 +1,6 @@
 /*
 	Vienna
-	~ Your cities with an established Governor provide +1 Diplomatic Favor per turn.
+	~ Your cities with an established Governor can purchase buildings for 25% less Gold.
 
 	Authors: ChimpanG
 */

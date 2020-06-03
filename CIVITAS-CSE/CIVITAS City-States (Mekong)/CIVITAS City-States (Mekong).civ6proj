@@ -22,7 +22,7 @@
   <Dependency type="Mod" title="CIVITAS [ICON_ENVOY] City-States" id="7d0b57ba-6a5c-4de0-ac10-e1e464ac82f6" />
   <Block type="Mod" title="CIVITAS [ICON_ENVOY] City-States (Yangtze)" id="4680edec-175d-4c65-904f-2abf2dbd997a" />
 </Associations>]]></AssociationData>
-    <InGameActionData><![CDATA[<InGameActions><UpdateText id="CSE_Mekong_Text"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Localisation.sql</File></UpdateText><UpdateDatabase id="CSE_Mekong_Master"><Properties><LoadOrder>5</LoadOrder></Properties><File>Core/CSE_Master.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Mekong_Types"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/Base/CSE_Agricultural.sql</File><File>Core/Base/CSE_Cultural.sql</File><File>Core/Base/CSE_Industrial.sql</File><File>Core/Base/CSE_Maritime.sql</File><File>Core/Base/CSE_Militaristic.sql</File><File>Core/Base/CSE_Religious.sql</File><File>Core/Base/CSE_Scientific.sql</File><File>Core/Base/CSE_Trade.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Mekong_Types_XP2"><Properties><LoadOrder>52</LoadOrder></Properties><Criteria>XP2</Criteria><File priority="601">Core/XP2/CSE_Consular_XP2.sql</File></UpdateDatabase><UpdateText id="CSE_Mekong_Text_XP2"><Properties><LoadOrder>42</LoadOrder></Properties><Criteria>XP2</Criteria><File>Core/CSE_Localisation_XP2.sql</File></UpdateText><UpdateDatabase id="CSE_Mekong_ModSupport"><Properties><LoadOrder>600</LoadOrder></Properties><File>Core/Mod Support/CSE_MS_ReligionExpanded.sql</File></UpdateDatabase><UpdateText id="CSE_Mekong_Text_XP1"><Properties><LoadOrder>41</LoadOrder></Properties><Criteria>XP1</Criteria><File>Core/CSE_Localisation_XP1.sql</File></UpdateText></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateText id="CSE_Mekong_Text"><Properties><LoadOrder>40</LoadOrder></Properties><File>Core/CSE_Localisation.sql</File></UpdateText><UpdateDatabase id="CSE_Mekong_Master"><Properties><LoadOrder>5</LoadOrder></Properties><File>Core/CSE_Master.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Mekong_Types"><Properties><LoadOrder>50</LoadOrder></Properties><File>Core/Base/CSE_Agricultural.sql</File><File>Core/Base/CSE_Cultural.sql</File><File>Core/Base/CSE_Industrial.sql</File><File>Core/Base/CSE_Maritime.sql</File><File>Core/Base/CSE_Militaristic.sql</File><File>Core/Base/CSE_Religious.sql</File><File>Core/Base/CSE_Scientific.sql</File><File>Core/Base/CSE_Trade.sql</File></UpdateDatabase><UpdateDatabase id="CSE_Mekong_Types_XP2"><Properties><LoadOrder>52</LoadOrder></Properties><Criteria>XP2</Criteria><File priority="601">Core/XP2/CSE_Consular_XP2.sql</File></UpdateDatabase><UpdateText id="CSE_Mekong_Text_XP2"><Properties><LoadOrder>42</LoadOrder></Properties><Criteria>XP2</Criteria><File>Core/CSE_Localisation_XP2.sql</File></UpdateText><UpdateDatabase id="CSE_Mekong_ModSupport"><Properties><LoadOrder>600</LoadOrder></Properties><File>Core/Mod Support/CSE_MS_ReligionExpanded.sql</File></UpdateDatabase><UpdateText id="CSE_Mekong_Text_XP1"><Properties><LoadOrder>41</LoadOrder></Properties><Criteria>XP1</Criteria><File>Core/CSE_Localisation_XP1.sql</File></UpdateText><UpdateDatabase id="CSE_Mekong_Types_XP1"><Properties><LoadOrder>51</LoadOrder></Properties><Criteria>XP1</Criteria><File>Core/XP1/CSE_Consular_XP1.sql</File></UpdateDatabase></InGameActions>]]></InGameActionData>
     <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="XP1" any="1"><GameCoreInUse>Expansion1,Expansion2</GameCoreInUse></Criteria><Criteria id="XP2"><GameCoreInUse>Expansion2</GameCoreInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
@@ -35,6 +35,7 @@
     <Folder Include="Core" />
     <Folder Include="Core\Base\" />
     <Folder Include="Core\Mod Support\" />
+    <Folder Include="Core\XP1" />
     <Folder Include="Core\XP2" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +76,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\Mod Support\CSE_MS_ReligionExpanded.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\XP1\CSE_Consular_XP1.sql">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\XP2\CSE_Consular_XP2.sql">

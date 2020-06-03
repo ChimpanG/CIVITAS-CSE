@@ -742,7 +742,7 @@ VALUES
 	("en_US",	"LOC_CIVILIZATION_CSE_KATARAGAMA_ADJECTIVE",	"Kataragama"	),
 	("en_US",	"LOC_CIVILIZATION_CSE_KATARAGAMA_DESCRIPTION",	"{LOC_CIVILIZATION_CSE_KATARAGAMA_NAME} city-state"		),
 	("en_US",	"LOC_CSE_KATARAGAMA_TRAIT_NAME",				"{LOC_CIVILIZATION_CSE_KATARAGAMA_NAME} Suzerain Bonus"	),
-	("en_US",	"LOC_CSE_KATARAGAMA_TRAIT_DESCRIPTION",			"Fresh water tiles and those adjacent yield +1 [ICON_FAITH] Faith."	),
+	("en_US",	"LOC_CSE_KATARAGAMA_TRAIT_DESCRIPTION",			"Tiles with fresh water access yield +1 [ICON_FAITH] Faith."	),
 	
 	("en_US",	"LOC_LEADER_MINOR_CIV_CSE_KATARAGAMA_NAME",		"{LOC_CIVILIZATION_CSE_KATARAGAMA_NAME}"	),
 	("en_US",	"LOC_CITY_NAME_KATARAGAMA",						"{LOC_CIVILIZATION_CSE_KATARAGAMA_NAME}"	),
@@ -797,7 +797,7 @@ VALUES
 	("en_US",	"LOC_CIVILIZATION_CSE_LIMA_ADJECTIVE",		"Lima"	),
 	("en_US",	"LOC_CIVILIZATION_CSE_LIMA_DESCRIPTION",	"{LOC_CIVILIZATION_CSE_LIMA_NAME} city-state"		),
 	("en_US",	"LOC_CSE_LIMA_TRAIT_NAME",					"{LOC_CIVILIZATION_CSE_LIMA_NAME} Suzerain Bonus"	),
-	("en_US",	"LOC_CSE_LIMA_TRAIT_DESCRIPTION",			"Your cities may build one more district than the [ICON_CITIZEN] Population would allow, if it has a Campus. Receive +50% [ICON_PRODUCTION] Production toward Campus districts."	),
+	("en_US",	"LOC_CSE_LIMA_TRAIT_DESCRIPTION",			"Your cities may build one more district than the [ICON_CITIZEN] Population would allow, if it has a Campus. Receive +20% [ICON_PRODUCTION] Production toward Campus districts."	),
 	
 	("en_US",	"LOC_LEADER_MINOR_CIV_CSE_LIMA_NAME",		"{LOC_CIVILIZATION_CSE_LIMA_NAME}"	),
 	("en_US",	"LOC_CITY_NAME_LIMA",						"{LOC_CIVILIZATION_CSE_LIMA_NAME}"	),
@@ -834,8 +834,8 @@ VALUES
 	("en_US",	"LOC_LEADER_MINOR_CIV_CSE_MAI_NAME",	"{LOC_CIVILIZATION_CSE_MAI_NAME}"	),
 	("en_US",	"LOC_CITY_NAME_MAI",					"{LOC_CIVILIZATION_CSE_MAI_NAME}"	),
 
-	("en_US",	"LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_CSE_MAI_CHAPTER_HISTORY_PARA_1",	"Maingmaw was founded some time in the first millenium BC, and was one of the largest ancient cities in the region. It was protected by three walls - an outer ring, a square inner wall, and then another circular keep. A canal ran through the city."	),
-	("en_US",	"LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_CSE_MAI_CHAPTER_HISTORY_PARA_2",	"In the 19th century, the Nandawya Paya temple was built in the centre of the ancient city site, possibly on top of an old temple ruin."	),
+	("en_US",	"LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_CSE_MAI_CHAPTER_HISTORY_PARA_1",	"Ma-i (also known as Maidh) was an ancient polity located in the modern-day Philippines. It is notable as the first place in the Philippines to be mentioned in a foreign account."	),
+	("en_US",	"LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_CSE_MAI_CHAPTER_HISTORY_PARA_2",	"The exact location of Ma-i is not known for certain, but historians believe that Bay, Laguna or the island of Mindoro are likely candidates. Chinese sources say the people of Ma-i lived in large villages and were known for the production of kapok cotton, beeswax, betel nuts, and cloth. It is unclear when the Ma-i state collapsed, but the last historical reference dates to 1339, suggesting an existence of over 350 years."	),
 
 	("en_US",	"LOC_RESOURCE_CSE_BEESWAX_NAME",		"Beeswax"		),
 	("en_US",	"LOC_RESOURCE_CSE_BETEL_NUT_NAME",		"Betel Nut"		),
@@ -858,27 +858,6 @@ VALUES
 
 	("en_US",	"LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_CSE_MAINGMAW_CHAPTER_HISTORY_PARA_1",	"Maingmaw was founded some time in the first millenium BC, and was one of the largest ancient cities in the region. It was protected by three walls - an outer ring, a square inner wall, and then another circular keep. A canal ran through the city."	),
 	("en_US",	"LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_CSE_MAINGMAW_CHAPTER_HISTORY_PARA_2",	"In the 19th century, the Nandawya Paya temple was built in the centre of the ancient city site, possibly on top of an old temple ruin."	),
-
------------------------------------------------
--- City-State | Marrakech TODO
------------------------------------------------
-	
-	("en_US",	"LOC_CIVILIZATION_CSE_MARRAKECH_NAME",			"Marrakech"	),
-	("en_US",	"LOC_CIVILIZATION_CSE_MARRAKECH_ADJECTIVE",		"Marrakech"	),
-	("en_US",	"LOC_CIVILIZATION_CSE_MARRAKECH_DESCRIPTION",	"{LOC_CIVILIZATION_CSE_MARRAKECH_NAME} city-state"		),
-	("en_US",	"LOC_CSE_MARRAKECH_TRAIT_NAME",					"{LOC_CIVILIZATION_CSE_MARRAKECH_NAME} Suzerain Bonus"	),
-	("en_US",	"LOC_CSE_MARRAKECH_TRAIT_DESCRIPTION",			"Your builders may construct the Riad unique improvement."	),
-	
-	("en_US",	"LOC_LEADER_MINOR_CIV_CSE_MARRAKECH_NAME",		"{LOC_CIVILIZATION_CSE_MARRAKECH_NAME}"	),
-	("en_US",	"LOC_CITY_NAME_MARRAKECH",						"{LOC_CIVILIZATION_CSE_MARRAKECH_NAME}"	),
-
-	("en_US",	"LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_CSE_MARRAKECH_CHAPTER_HISTORY_PARA_1",		"Marrakech is a major city of the Kingdom of Morocco. Located to the north of the snow-capped Atlas Mountains, the region has been inhabited by Berber farmers since the Neolithic period, but the actual city was founded in 1062, by Abu Bakr ibn Umar. It became one of the great citadels of the Muslim world, the ramparts of its fortress standing to this day. Marrakech is one of North Africa's largest centers of trade, despite the illegality of most of this trade. "	),
-
-
-	("en_US",	"LOC_IMPROVEMENT_CSE_RIAD_NAME",				"Riad"	),
-	("en_US",	"LOC_IMPROVEMENT_CSE_RIAD_DESCRIPTION",			"Unlocks the Builder ability to construct a Riad.[NEWLINE][NEWLINE]Yields +1 [ICON_FOOD] Food, +1 [ICON_CULTURE] Culture and +0.5 [ICON_HOUSING] Housing. +1 [ICON_FOOD] Food for each adjacent Oasis or for every two adjacent Floodplains, and +1 [ICON_CULTURE] Culture for every two adjacent Riads. Grants +1 [ICON_GOLD] Gold on [ICON_TRADEROUTE] Trade Routes from this city. Must be built on Desert or Desert Hill tiles."	),
-	
-	("en_US",	"LOC_PEDIA_IMPROVEMENTS_PAGE_IMPROVEMENT_CSE_RIAD_CHAPTER_HISTORY_PARA_1",			"A riad is a type of traditional Moroccan house or palace with an interior garden or courtyard. Often the stately homes of the wealthiest citizens such as merchants or courtiers, Riads were inward-focused with a courtyard in the atrium space to allow for family privacy and protection."	),
 
 -----------------------------------------------
 -- City-State | Megiddo
@@ -1189,7 +1168,7 @@ VALUES
 	("en_US",	"LOC_CIVILIZATION_CSE_SINGAPORE_ADJECTIVE",		"Singapore"	),
 	("en_US",	"LOC_CIVILIZATION_CSE_SINGAPORE_DESCRIPTION",	"{LOC_CIVILIZATION_CSE_SINGAPORE_NAME} city-state"		),
 	("en_US",	"LOC_CSE_SINGAPORE_TRAIT_NAME",					"{LOC_CIVILIZATION_CSE_SINGAPORE_NAME} Suzerain Bonus"	),
-	("en_US",	"LOC_CSE_SINGAPORE_TRAIT_DESCRIPTION",			"Your civilization gains +1 [ICON_GOLD] Gold for each [ICON_ENVOY] Envoy sent to a city-state."	),
+	("en_US",	"LOC_CSE_SINGAPORE_TRAIT_DESCRIPTION",			"Your cities receive +1 [ICON_SCIENCE] Science and +1 [ICON_CULTURE] Culture for each foreign civilization they have a [ICON_TRADEROUTE] Trade Route to."	),
 	
 	("en_US",	"LOC_LEADER_MINOR_CIV_CSE_SINGAPORE_NAME",		"{LOC_CIVILIZATION_CSE_SINGAPORE_NAME}"	),
 	("en_US",	"LOC_CITY_NAME_SINGAPORE",						"{LOC_CIVILIZATION_CSE_SINGAPORE_NAME}"	),
@@ -1260,7 +1239,7 @@ VALUES
 	("en_US",	"LOC_CIVILIZATION_CSE_TEYUNA_ADJECTIVE",	"Teyuna"	),
 	("en_US",	"LOC_CIVILIZATION_CSE_TEYUNA_DESCRIPTION",	"{LOC_CIVILIZATION_CSE_TEYUNA_NAME} city-state"		),
 	("en_US",	"LOC_CSE_TEYUNA_TRAIT_NAME",				"{LOC_CIVILIZATION_CSE_TEYUNA_NAME} Suzerain Bonus"	),
-	("en_US",	"LOC_CSE_TEYUNA_TRAIT_DESCRIPTION",			"Tiles in your territory that are adjacent to a mountain yield +1 [ICON_PRODUCTION] Production."	),
+	("en_US",	"LOC_CSE_TEYUNA_TRAIT_DESCRIPTION",			"Your cities yield +1 [ICON_PRODUCTION] Production for each mountain in their territory."	),
 	
 	("en_US",	"LOC_LEADER_MINOR_CIV_CSE_TEYUNA_NAME",		"{LOC_CIVILIZATION_CSE_TEYUNA_NAME}"	),
 	("en_US",	"LOC_CITY_NAME_TEYUNA",						"{LOC_CIVILIZATION_CSE_TEYUNA_NAME}"	),
@@ -1390,7 +1369,7 @@ VALUES
 	("en_US",	"LOC_CIVILIZATION_CSE_VIENNA_ADJECTIVE",		"Vienna"	),
 	("en_US",	"LOC_CIVILIZATION_CSE_VIENNA_DESCRIPTION",		"{LOC_CIVILIZATION_CSE_VIENNA_NAME} city-state"		),
 	("en_US",	"LOC_CSE_VIENNA_TRAIT_NAME",					"{LOC_CIVILIZATION_CSE_VIENNA_NAME} Suzerain Bonus"	),
-	("en_US",	"LOC_CSE_VIENNA_TRAIT_DESCRIPTION",				"Your cities with an established [ICON_GOVERNOR] Governor provide +1 [ICON_FAVOR] Diplomatic Favor per turn."	),
+	("en_US",	"LOC_CSE_VIENNA_TRAIT_DESCRIPTION",				"Your cities with an established [ICON_GOVERNOR] Governor can purchase buildings for 25% less [ICON_GOLD] Gold."	),
 
 	("en_US",	"LOC_LEADER_MINOR_CIV_CSE_VIENNA_NAME",			"{LOC_CIVILIZATION_CSE_VIENNA_NAME}"	),
 	("en_US",	"LOC_CITY_NAME_VIENNA",							"{LOC_CIVILIZATION_CSE_VIENNA_NAME}"	),
